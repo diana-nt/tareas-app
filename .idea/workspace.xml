@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c52bd6b-bb27-4626-8689-7bbb6084d235" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/AgreagarTarea.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AgreagarTarea.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AgregarTarea.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Tareas.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tareas.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602237746831</updated>
       <workItem from="1602237747971" duration="666000" />
-      <workItem from="1602238435154" duration="5350000" />
+      <workItem from="1602238435154" duration="9142000" />
     </task>
     <task id="LOCAL-00001" summary="Save app init">
       <created>1602238477211</created>
@@ -85,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602243878390</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add functionality to input">
+      <created>1602245049699</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602245049699</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,21 +105,22 @@
     <MESSAGE value="Add unversioned files" />
     <MESSAGE value="Render tasks and add delete button" />
     <MESSAGE value="Add input for adding tasks and some button CSS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add input for adding tasks and some button CSS" />
+    <MESSAGE value="Add functionality to input" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add functionality to input" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3528" y="545" width="604" height="357" key="#Notifications" timestamp="1602238706082">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="3528" y="545" width="604" height="357" key="#Notifications/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602238706082" />
-    <state x="3379" y="266" width="912" height="914" key="CommitChangelistDialog2" timestamp="1602243878310">
+    <state x="3379" y="266" width="912" height="914" key="CommitChangelistDialog2" timestamp="1602245049664">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3379" y="266" width="912" height="914" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602243878310" />
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602243883268">
+    <state x="3379" y="266" width="912" height="914" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602245049664" />
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602245053013">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602243883268" />
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602245053013" />
     <state x="3531" y="459" width="618" height="522" key="find.popup" timestamp="1602237781565">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>

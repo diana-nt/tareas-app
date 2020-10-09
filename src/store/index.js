@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  strict: true,
   state: {
     tareas: [
       {
@@ -49,8 +50,8 @@ export default new Vuex.Store({
       state.tareas.unshift(nuevaTarea);
     },
     COMPLETAR_TAREA(state, tareaId){
-      const tarea = state.tareas.findIndex(tarea => tarea.id === tareaId);
-      tarea.completed = !tarea.completed;
+      const tarea = state.tareas.find(tarea => tarea.id === tareaId);
+      tarea.completed = !tarea.completed
     },
     ELIMINAR_TAREA(state, tareaId){
       const index = state.tareas.findIndex(tarea => tarea.id === tareaId);
@@ -62,6 +63,7 @@ export default new Vuex.Store({
       context.commit("AGREGAR_TAREA", tarea);
     },
     completarTarea(context, tareaId){
+      console.log('completarTarea',tareaId)
       context.commit("COMPLETAR_TAREA", tareaId);
     },
     eliminarTarea(context, tareaId){

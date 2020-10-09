@@ -2,7 +2,7 @@
   <div id="app">
       <h2>TAREAS QUE HACER</h2>
 
-      <agreagar-tarea />
+      <agregar-tarea />
       <tareas />
 
   </div>
@@ -10,13 +10,13 @@
 
 <script>
 import Tareas from "./components/Tareas";
-import AgreagarTarea from "./components/AgreagarTarea";
+import AgregarTarea from "./components/AgregarTarea";
 
 export default {
   name: 'App',
   components: {
       Tareas,
-      AgreagarTarea
+      AgregarTarea
   }
 }
 </script>
