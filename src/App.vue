@@ -3,6 +3,12 @@
       <h2>TAREAS QUE HACER</h2>
 
       <agregar-tarea />
+
+      <custom-select
+          :options="['Tareas', 'Pendientes', 'Finalizadas']"
+          default="Tareas"
+          @input="cambiarTab"/>
+
       <tareas />
 
   </div>
@@ -11,13 +17,20 @@
 <script>
 import Tareas from "./components/Tareas";
 import AgregarTarea from "./components/AgregarTarea";
+import CustomSelect from "./components/CustomSelect";
 
 export default {
   name: 'App',
   components: {
       Tareas,
-      AgregarTarea
-  }
+      AgregarTarea,
+      CustomSelect
+  },
+    methods: {
+        cambiarTab(tab){
+            this.$store.dispatch('cambiarTab', tab);
+        },
+    }
 }
 </script>
 

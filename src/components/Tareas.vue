@@ -4,7 +4,7 @@
             <li v-for="tarea in tareas" :key="tarea.id">
                 <label class="container">
                     <input type="checkbox" v-model="tarea.completed" @input="completarTarea(tarea.id)">
-                    <span :class="{ 'completed': tarea.completed }">{{ tarea.title }}</span>
+                    <span :tareas="mostrarTareas" :class="{ 'completed': tarea.completed }">{{ tarea.title }}</span>
                     <span class="checkmark"></span>
                 </label>
                 <button @click="eliminarTarea(tarea.id)"><font-awesome-icon icon="times" class="iconPosition"/></button>
@@ -28,10 +28,8 @@ name: "Tareas.vue",
     },
 
     computed: {
-        ...mapGetters({tareas:"getTodos"}),
-        // tareas() {
-        //     return this.$store.getters.getTodos;
-        // },
+        // ...mapGetters({tareas:"getTareas"}),
+        ...mapGetters({tareas:"getTareasAMostrar"}),
 
     },
     methods: {
@@ -40,6 +38,14 @@ name: "Tareas.vue",
         },
         eliminarTarea(id) {
             this.$store.dispatch("eliminarTarea", id);
+        },
+        mostrarTareas(){
+            if (this.$store.getters.getTab === 'finalizadas'){
+                return this.$store.getters.getTareasFinalizadas;
+            }else if (this.$store.getters.getTab === 'pendientes'){
+                return this.$store.getters.getTareasPendientes;
+            }
+            return this.$store.getters.getTareas;
         }
     },
 

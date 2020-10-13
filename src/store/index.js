@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   strict: true,
   state: {
+    actual: 'tareas',
     tareas: [
       {
         id: 1,
@@ -56,6 +57,9 @@ export default new Vuex.Store({
     ELIMINAR_TAREA(state, tareaId){
       const index = state.tareas.findIndex(tarea => tarea.id === tareaId);
       state.tareas.splice(index, 1);
+    },
+    CAMBIAR_TAB(state, tab){
+      state.actual = tab.toLowerCase();
     }
   },
   actions: {
@@ -63,15 +67,34 @@ export default new Vuex.Store({
       context.commit("AGREGAR_TAREA", tarea);
     },
     completarTarea(context, tareaId){
-      console.log('completarTarea',tareaId)
       context.commit("COMPLETAR_TAREA", tareaId);
     },
     eliminarTarea(context, tareaId){
       context.commit("ELIMINAR_TAREA", tareaId);
-    }
+    },
+    cambiarTab(context, tab){
+      context.commit("CAMBIAR_TAB", tab);
+    },
   },
   getters: {
-    getTodos(state){
+    getTareas(state){
+      return state.tareas;
+    },
+    getTareasFinalizadas(state){
+      return state.tareas.filter(tarea => tarea.completed === true);
+    },
+    getTareasPendientes(state){
+      return state.tareas.filter(tarea => tarea.completed === false);
+    },
+/*    getTab(state){
+      return state.actual;
+    },*/
+    getTareasAMostrar(state, getters){
+      if (state.actual === 'finalizadas'){
+        return getters.getTareasFinalizadas;
+      }else if (state.actual === 'pendientes'){
+        return getters.getTareasPendientes;
+      }
       return state.tareas;
     }
   },
