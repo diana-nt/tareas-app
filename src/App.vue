@@ -10,7 +10,7 @@
           @input="cambiarTab"/>
 
       <tareas />
-
+      <button @click="ordenarTareas">Ordenar</button>
   </div>
 </template>
 
@@ -30,6 +30,9 @@ export default {
         cambiarTab(tab){
             this.$store.dispatch('cambiarTab', tab);
         },
+        ordenarTareas(){
+            this.$store.dispatch('ordenarTareas')
+        }
     }
 }
 </script>

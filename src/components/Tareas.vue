@@ -59,6 +59,10 @@ li {
     margin-bottom: 20px;
 }
 
+ul{
+    margin-left: 40px;
+}
+
 .completed {
     background: linear-gradient(to right, rgba(175, 238, 238, 0.5), rgb(175, 238, 238), rgba(175, 238, 238, 0.5));
     content: "";

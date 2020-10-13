@@ -60,6 +60,9 @@ export default new Vuex.Store({
     },
     CAMBIAR_TAB(state, tab){
       state.actual = tab.toLowerCase();
+    },
+    ORDENAR_TAREAS(state){
+      state.tareas = state.tareas.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
     }
   },
   actions: {
@@ -75,6 +78,9 @@ export default new Vuex.Store({
     cambiarTab(context, tab){
       context.commit("CAMBIAR_TAB", tab);
     },
+    ordenarTareas(context){
+      context.commit("ORDENAR_TAREAS");
+    }
   },
   getters: {
     getTareas(state){
