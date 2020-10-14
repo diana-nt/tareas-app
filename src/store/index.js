@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate';
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   strict: true,
+  plugins: [createPersistedState()],
   state: {
     actual: 'tareas',
     tareas: [
@@ -63,7 +65,7 @@ export default new Vuex.Store({
     },
     ORDENAR_TAREAS(state){
       state.tareas = state.tareas.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
-    }
+    },
   },
   actions: {
     agregarTarea(context, tarea){

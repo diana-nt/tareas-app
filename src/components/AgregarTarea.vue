@@ -24,10 +24,19 @@ name: "AgreagarTarea.vue",
     },
     data() {
         return {
-            newId: 3,
+            newId: 6,
             title:'',
             completed: false,
             created_at: new Date()
+        }
+    },
+    mounted() {
+        if (localStorage.getItem('tareas')) {
+            try {
+                this.tareas = JSON.parse(localStorage.getItem('tareas'));
+            }catch (e) {
+                localStorage.removeItem('tareas');
+            }
         }
     },
     methods:{
