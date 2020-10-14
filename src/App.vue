@@ -1,51 +1,17 @@
 <template>
-  <div id="app">
-      <h2>TAREAS QUE HACER</h2>
 
-      <agregar-tarea />
+    <home></home>
 
-      <custom-select
-          :options="['Tareas', 'Pendientes', 'Finalizadas']"
-          default="Tareas"
-          @input="cambiarTab"/>
-
-      <tareas />
-      <button @click="ordenarTareas">Ordenar</button>
-  </div>
 </template>
 
 <script>
-import Tareas from "./components/Tareas";
-import AgregarTarea from "./components/AgregarTarea";
-import CustomSelect from "./components/CustomSelect";
-
+import Home from "./views/Home";
 export default {
-  name: 'App',
-  components: {
-      Tareas,
-      AgregarTarea,
-      CustomSelect
-  },
-    methods: {
-        cambiarTab(tab){
-            this.$store.dispatch('cambiarTab', tab);
-        },
-        ordenarTareas(){
-            this.$store.dispatch('ordenarTareas')
-        }
-    }
+    name: "App",
+    components: {Home}
 }
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
-h2 {
+<style scoped>
 
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
-    padding-top: 50px;
-    font-size: 60px;
-    text-decoration: underline;
-    text-decoration-color: paleturquoise;
-}
 </style>

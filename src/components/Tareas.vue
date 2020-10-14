@@ -63,6 +63,7 @@ li {
 
 ul{
     margin-left: 40px;
+    width: 400px;
 }
 
 .completed {
@@ -76,12 +77,14 @@ ul{
 }
 
 button{
-    margin-left: 20px;
+    /*margin-left: 20px;*/
     border-radius: 0;
     height: 20px;
     width: 20px;
     background-color: #afeeee;
     cursor: pointer;
+    float: right;
+    margin-right: ;
 }
 
 .iconPosition {
