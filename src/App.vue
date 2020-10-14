@@ -1,14 +1,19 @@
 <template>
 
-    <home></home>
+<!--    <home></home>-->
+    <div id="app">
+        <Navegacion />
+        <RouterView />
+    </div>
 
 </template>
 
 <script>
-import Home from "./views/Home";
+// import Home from "./views/Home";
+import Navegacion from "./components/Navegacion";
 export default {
     name: "App",
-    components: {Home}
+    components: {Navegacion, }
 }
 </script>
 
