@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c52bd6b-bb27-4626-8689-7bbb6084d235" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tareas.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tareas.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
       <workItem from="1602237747971" duration="666000" />
       <workItem from="1602238435154" duration="9162000" />
       <workItem from="1602568536547" duration="11097000" />
-      <workItem from="1602655460127" duration="8909000" />
+      <workItem from="1602655460127" duration="9927000" />
     </task>
     <task id="LOCAL-00001" summary="Save app init">
       <created>1602238477211</created>
@@ -130,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602663495797</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add home view">
+      <created>1602666458509</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1602666458509</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,17 +154,18 @@
     <MESSAGE value="Add sort button" />
     <MESSAGE value="Add persisted state" />
     <MESSAGE value="Add date for state changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add date for state changes" />
+    <MESSAGE value="Add home view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add home view" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3528" y="545" width="604" height="357" key="#Notifications" timestamp="1602238706082">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="3528" y="545" width="604" height="357" key="#Notifications/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602238706082" />
-    <state x="3379" y="266" width="912" height="914" key="CommitChangelistDialog2" timestamp="1602663495733">
+    <state x="3379" y="266" width="912" height="914" key="CommitChangelistDialog2" timestamp="1602666458435">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3379" y="266" width="912" height="914" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602663495733" />
+    <state x="3379" y="266" width="912" height="914" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602666458435" />
     <state x="3618" y="478" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602663534256">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
