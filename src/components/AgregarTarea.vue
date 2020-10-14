@@ -44,6 +44,10 @@ name: "AgreagarTarea.vue",
             this.$store.dispatch('agregarTarea', this);
             this.newId ++;
             this.title = '';
+            this.$store.dispatch('actualizarFecha');
+        },
+        actualizarFecha(){
+            this.$store.dispatch('actualizarFecha');
         }
     },
     directives: {

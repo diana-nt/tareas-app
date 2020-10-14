@@ -8,6 +8,7 @@ export default new Vuex.Store({
   strict: true,
   plugins: [createPersistedState()],
   state: {
+    fechaActualizacionEstado: '',
     actual: 'tareas',
     tareas: [
       {
@@ -66,6 +67,9 @@ export default new Vuex.Store({
     ORDENAR_TAREAS(state){
       state.tareas = state.tareas.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
     },
+    ACTUALIZAR_FECHA(state) {
+      state.fechaActualizacionEstado = new Date().getDate() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getFullYear();
+    }
   },
   actions: {
     agregarTarea(context, tarea){
@@ -82,6 +86,10 @@ export default new Vuex.Store({
     },
     ordenarTareas(context){
       context.commit("ORDENAR_TAREAS");
+    },
+    actualizarFecha(context){
+      context.commit('ACTUALIZAR_FECHA');
+      console.log('Estado modificado por última vez el ' + context.state.fechaActualizacionEstado)
     }
   },
   getters: {

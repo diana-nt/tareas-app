@@ -35,9 +35,11 @@ name: "Tareas.vue",
     methods: {
         completarTarea(id) {
             this.$store.dispatch("completarTarea", id);
+            this.$store.dispatch('actualizarFecha');
         },
         eliminarTarea(id) {
             this.$store.dispatch("eliminarTarea", id);
+            this.$store.dispatch('actualizarFecha');
         },
         mostrarTareas(){
             if (this.$store.getters.getTab === 'finalizadas'){
