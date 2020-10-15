@@ -1,23 +1,37 @@
 <template>
+    <div>
+        <h2>COMPLETADAS AYER</h2>
 
-    <h2>Tareas completadas ayer</h2>
-
+        <ul>
+            <li v-for="completada in completadas" :key="completada.id">{{ completada.title }}</li>
+        </ul>
+    </div>
 </template>
 
 <script>
+import {mapGetters} from 'vuex';
+
 export default {
     name: "TareasCompletadasAyer",
     methods: {
-        verPost() {
-            this.$router.push({
-                name: 'ystdtasks',
-            })
-        }
     },
+    computed: {
+        ...mapGetters({completadas:"getCompletadasAyer"})
+    }
 
 }
 </script>
 
 <style scoped>
+
+ul {
+    text-align: center;
+    font-size: 18px;
+}
+
+li{
+    list-style: none;
+    margin-bottom: 20px;
+}
 
 </style>

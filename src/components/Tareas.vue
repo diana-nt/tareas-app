@@ -4,13 +4,14 @@
             <li v-for="tarea in tareas" :key="tarea.id">
                 <label class="container">
                     <input type="checkbox" v-model="tarea.completed" @input="completarTarea(tarea.id)">
-                    <span :tareas="mostrarTareas" :class="{ 'completed': tarea.completed }">{{ tarea.title }}</span>
+                    <span :class="{ 'completed': tarea.completed }">{{ tarea.title }}</span>
                     <span class="checkmark"></span>
                 </label>
                 <button @click="eliminarTarea(tarea.id)"><font-awesome-icon icon="times" class="iconPosition"/></button>
             </li>
         </ul>
     </div>
+
 </template>
 
 <script>
@@ -23,6 +24,15 @@ library.add(faTimes);
 
 export default {
 name: "Tareas.vue",
+
+    /*data () {
+        return {
+            id: '',
+            title: '',
+            fechaCompletado: new Date()
+        }
+    },*/
+
     components: {
         FontAwesomeIcon
     },
@@ -30,8 +40,12 @@ name: "Tareas.vue",
     computed: {
         // ...mapGetters({tareas:"getTareas"}),
         ...mapGetters({tareas:"getTareasAMostrar"}),
-
     },
+
+    created() {
+        this.$store.dispatch('agregarCompletadas');
+    },
+
     methods: {
         completarTarea(id) {
             this.$store.dispatch("completarTarea", id);
@@ -41,14 +55,6 @@ name: "Tareas.vue",
             this.$store.dispatch("eliminarTarea", id);
             this.$store.dispatch('actualizarFecha');
         },
-        mostrarTareas(){
-            if (this.$store.getters.getTab === 'finalizadas'){
-                return this.$store.getters.getTareasFinalizadas;
-            }else if (this.$store.getters.getTab === 'pendientes'){
-                return this.$store.getters.getTareasPendientes;
-            }
-            return this.$store.getters.getTareas;
-        }
     },
 
 }
@@ -84,7 +90,7 @@ button{
     background-color: #afeeee;
     cursor: pointer;
     float: right;
-    margin-right: ;
+    /*margin-right: ;*/
 }
 
 .iconPosition {

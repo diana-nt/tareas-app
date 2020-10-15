@@ -27,7 +27,8 @@ name: "AgreagarTarea.vue",
             newId: 6,
             title:'',
             completed: false,
-            created_at: new Date()
+            created_at: new Date(),
+            completed_at: ''
         }
     },
     mounted() {
@@ -45,10 +46,11 @@ name: "AgreagarTarea.vue",
             this.newId ++;
             this.title = '';
             this.$store.dispatch('actualizarFecha');
+            this.completed_at = '';
         },
-        actualizarFecha(){
+        /*actualizarFecha(){
             this.$store.dispatch('actualizarFecha');
-        }
+        }*/
     },
     directives: {
         focus: {

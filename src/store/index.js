@@ -15,33 +15,39 @@ export default new Vuex.Store({
         id: 1,
         title: 'Aprender Vue',
         completed: false,
-        created_at: new Date('2017-06-01')
+        created_at: new Date('2017-06-01'),
+        completed_at: ''
       },
       {
         id: 2,
         title: 'Lavar coche',
         completed: false,
-        created_at: new Date('2018-04-23')
+        created_at: new Date('2018-04-23'),
+        completed_at: ''
       },
       {
         id: 3,
         title: 'Pasar la aspiradora',
         completed: false,
-        created_at: new Date('2019-11-30')
+        created_at: new Date('2019-11-30'),
+        completed_at: ''
       },
       {
         id: 4,
         title: 'Hacer trabajo de clase',
-        completed: false,
-        created_at: new Date('2019-02-10')
+        completed: true,
+        created_at: new Date('2019-02-10'),
+        completed_at: 14
       },
       {
         id: 5,
         title: 'Comprar impresora',
         completed: false,
-        created_at: new Date('2004-08-13')
+        created_at: new Date('2004-08-13'),
+        completed_at: ''
       }
     ],
+    completadas: []
   },
   mutations: {
     AGREGAR_TAREA (state, tarea){
@@ -49,13 +55,15 @@ export default new Vuex.Store({
         id: tarea.newId,
         title: tarea.title,
         completed: false,
-        created_at: new Date()
+        created_at: new Date(),
+        completed_at: tarea.completed_at
       }
-      state.tareas.unshift(nuevaTarea);
+      state.tareas.push(nuevaTarea);
     },
     COMPLETAR_TAREA(state, tareaId){
       const tarea = state.tareas.find(tarea => tarea.id === tareaId);
       tarea.completed = !tarea.completed
+      tarea.completed_at = new Date().getDate()
     },
     ELIMINAR_TAREA(state, tareaId){
       const index = state.tareas.findIndex(tarea => tarea.id === tareaId);
@@ -69,6 +77,9 @@ export default new Vuex.Store({
     },
     ACTUALIZAR_FECHA(state) {
       state.fechaActualizacionEstado = new Date().getDate() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getFullYear();
+    },
+    AGREGAR_COMPLETADAS(state) {
+      state.completadas = state.tareas.filter(tarea => tarea.completed === true);
     }
   },
   actions: {
@@ -90,6 +101,9 @@ export default new Vuex.Store({
     actualizarFecha(context){
       context.commit('ACTUALIZAR_FECHA');
       console.log('Estado modificado por última vez el ' + context.state.fechaActualizacionEstado)
+    },
+    agregarCompletadas(context){
+      context.commit('AGREGAR_COMPLETADAS');
     }
   },
   getters: {
@@ -102,9 +116,6 @@ export default new Vuex.Store({
     getTareasPendientes(state){
       return state.tareas.filter(tarea => tarea.completed === false);
     },
-/*    getTab(state){
-      return state.actual;
-    },*/
     getTareasAMostrar(state, getters){
       if (state.actual === 'finalizadas'){
         return getters.getTareasFinalizadas;
@@ -112,7 +123,12 @@ export default new Vuex.Store({
         return getters.getTareasPendientes;
       }
       return state.tareas;
+    },
+    getCompletadasAyer(state){
+      const diaActual = new Date().getDate();
+      return state.completadas.filter((completada => completada.completed_at === (diaActual - 1)))
     }
+
   },
   modules: {
   }

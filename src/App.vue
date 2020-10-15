@@ -13,7 +13,17 @@
 import Navegacion from "./components/Navegacion";
 export default {
     name: "App",
-    components: {Navegacion, }
+    components: {Navegacion, },
+    created() {
+            var envJSON = require('../env.variables.json');
+            if (envJSON['development']){
+                console.log('Estás en desarrollo')
+            } else if (envJSON['production']){
+                console.log('Estás en producción')
+            }else {
+                console.log('Has hecho algo mal con la variable de entorno')
+            }
+    }
 }
 </script>
 
