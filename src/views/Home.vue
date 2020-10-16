@@ -1,16 +1,11 @@
 <template>
     <div id="app">
-<!--        <navegacion />-->
-
         <h2>TAREAS QUE HACER</h2>
-
         <agregar-tarea />
-
         <custom-select
             :options="['Tareas', 'Pendientes', 'Finalizadas']"
             default="Tareas"
             @input="cambiarTab"/>
-
         <tareas />
         <button class="ordenar" @click="ordenarTareas">Ordenar</button>
     </div>
@@ -20,12 +15,10 @@
 import Tareas from "../components/Tareas";
 import AgregarTarea from "../components/AgregarTarea";
 import CustomSelect from "../components/CustomSelect";
-// import Navegacion from "../components/Navegacion";
 
 export default {
     name: 'Home.vue',
     components: {
-        // Navegacion,
         Tareas,
         AgregarTarea,
         CustomSelect

@@ -1,12 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate';
+import account from './account';
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   strict: true,
   plugins: [createPersistedState()],
+  modules: {
+    account
+  },
   state: {
     fechaActualizacionEstado: '',
     actual: 'tareas',
@@ -128,8 +132,5 @@ export default new Vuex.Store({
       const diaActual = new Date().getDate();
       return state.completadas.filter((completada => completada.completed_at === (diaActual - 1)))
     }
-
   },
-  modules: {
-  }
 })

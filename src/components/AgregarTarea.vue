@@ -48,9 +48,6 @@ name: "AgreagarTarea.vue",
             this.$store.dispatch('actualizarFecha');
             this.completed_at = '';
         },
-        /*actualizarFecha(){
-            this.$store.dispatch('actualizarFecha');
-        }*/
     },
     directives: {
         focus: {

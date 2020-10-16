@@ -11,7 +11,7 @@
             selected = option;
             open = false;
             $emit('input', option);
-"
+                "
             >
                 {{ option }}
             </div>

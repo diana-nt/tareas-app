@@ -25,20 +25,11 @@ library.add(faTimes);
 export default {
 name: "Tareas.vue",
 
-    /*data () {
-        return {
-            id: '',
-            title: '',
-            fechaCompletado: new Date()
-        }
-    },*/
-
     components: {
         FontAwesomeIcon
     },
 
     computed: {
-        // ...mapGetters({tareas:"getTareas"}),
         ...mapGetters({tareas:"getTareasAMostrar"}),
     },
 

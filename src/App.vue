@@ -1,48 +1,21 @@
 <template>
-
-<!--    <home></home>-->
     <div id="app">
-        <!--<navegacion />
-        <router-view />-->
-        <!--<div id="nav">
-            <router-link v-if="authenticated" to="/login" v-on:click.native="logout()" replace>Logout</router-link>
-        </div>-->
-
-        <navegacion v-if="authenticated" @logout = "logout"/>
-        <router-view @authenticated="setAuthenticated" />
+        <navegacion v-if="authenticated" @logout="logout"/>
+<!--        <router-view @authenticated="setAuthenticated" />-->
+        <router-view />
     </div>
-
 </template>
 
 <script>
-// import Home from "./views/Home";
-// import Navegacion from "./components/Navegacion";
-// import Login from "./components/Login";
-
 import Navegacion from "./components/Navegacion";
+import {mapGetters} from "vuex";
+
 export default {
     name: "App",
     components: {
         Navegacion
-        // Navegacion,
-        // Login
     },
     /*data() {
-        return {
-            userIsLoggedIn: false
-        }
-    },
-    computed: {
-        isLoggedIn() {
-            return this.userIsLoggedIn
-        }
-    },
-    methods: {
-        handleLoginResult({loginResult}) {
-            this.userIsLoggedIn = loginResult
-        }
-    },*/
-    data() {
         return {
             authenticated: false,
             mockAccount: {
@@ -50,19 +23,23 @@ export default {
                 password: "1234"
             }
         }
-    },
-    mounted() {
+    },*/
+    /*mounted() {
         if(!this.authenticated) {
             this.$router.replace({ name: "login" });
         }
-    },
+    },*/
     methods: {
-        setAuthenticated(status) {
+        /*setAuthenticated(status) {
             this.authenticated = status;
-        },
+        },*/
         logout() {
-            this.authenticated = false;
+            // this.authenticated = false;
+            this.$store.dispatch('logout');
         }
+    },
+    computed: {
+        ...mapGetters({authenticated:"getAuthenticated"}),
     },
     created() {
             const envJSON = require('../env.variables.json');

@@ -2,14 +2,16 @@
     <div id="login">
         <h2>Inicia sesión</h2>
         <div id="inputs">
-            <input type="text" name="username" v-model="input.username" placeholder="Username" />
-            <input type="password" name="password" v-model="input.password" placeholder="Password" />
+            <input type="text" name="username" v-model="input.username" placeholder="Username" v-focus/>
+            <input type="password" name="password" v-model="input.password" placeholder="Password" @keyup.enter="login" />
         </div>
-        <button type="button" v-on:click="login()">Login</button>
+        <button type="button" @click="login()">Login</button>
     </div>
 </template>
 
 <script>
+import {mapGetters} from "vuex";
+
 export default {
     name: 'Login',
     data() {
@@ -21,16 +23,39 @@ export default {
         }
     },
     methods: {
-        login() {
+        /*login() {
             if(this.input.username != "" && this.input.password != "") {
                 if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
                     this.$emit("authenticated", true);
                     this.$router.replace({ name: "Home" });
                 } else {
-                    console.log("The username and / or password is incorrect");
+                    console.log("Nombre de usuario y/o contraseña incorrecto/s");
                 }
             } else {
-                console.log("A username and password must be present");
+                console.log("Debes introducir un nombre de usuario y una contraseña");
+            }
+        }*/
+        login() {
+            if(this.input.username != "" && this.input.password != "") {
+                if(this.input.username == this.account.username && this.input.password == this.account.password) {
+                    this.$store.dispatch('login');
+                    this.$router.replace({ name: "Home" });
+                } else {
+                    console.log("Nombre de usuario y/o contraseña incorrecto/s");
+                }
+            } else {
+                console.log("Debes introducir un nombre de usuario y una contraseña");
+            }
+        }
+    },
+    computed: {
+        ...mapGetters({authenticated:"getAuthenticated"}),
+        ...mapGetters({account:"getMockAccount"})
+    },
+    directives: {
+        focus: {
+            inserted: function (el) {
+                el.focus()
             }
         }
     }
