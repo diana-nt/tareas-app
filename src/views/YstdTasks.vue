@@ -1,5 +1,7 @@
 <template>
     <div>
+<!--        <navegacion />-->
+
         <h2>COMPLETADAS AYER</h2>
 
         <ul>
@@ -10,9 +12,11 @@
 
 <script>
 import {mapGetters} from 'vuex';
+// import Navegacion from "../components/Navegacion";
 
 export default {
     name: "TareasCompletadasAyer",
+    // components: {Navegacion},
     methods: {
     },
     computed: {

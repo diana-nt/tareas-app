@@ -4,8 +4,10 @@
             <!--<RouterLink to="/">Home</RouterLink> |
             <RouterLink :to="{name: 'ystdtasks'}">Tareas completadas ayer</RouterLink>-->
             <ul>
-                <li> <router-link to="/">Home</router-link> </li>
-                <li> <router-link :to="{name: 'ystdtasks'}">Tareas completadas ayer</router-link> </li>
+                <li> <router-link :to="{name: 'Home'}">Home</router-link> </li>
+                <li> <router-link :to="{name: 'Ystdtasks'}">Tareas completadas ayer</router-link> </li>
+<!--                <li> <router-link :to="{name: 'Login'}">Login</router-link></li>-->
+                <li style="float: right"> <router-link class="active" to="/login" v-on:click.native="$emit('logout')" replace>Logout</router-link> </li>
             </ul>
         </div>
     </div>
@@ -13,7 +15,9 @@
 
 <script>
 export default {
-name: "Navegacion"
+name: "Navegacion",
+    methods: {
+    }
 }
 </script>
 
@@ -40,12 +44,16 @@ li a {
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: darkgray;
 }
+
+/*li a:active {
+    background-color: paleturquoise;
+}*/
 
 .active {
     background-color: paleturquoise;
+    color: black;
 }
-
 
 </style>

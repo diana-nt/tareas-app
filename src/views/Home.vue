@@ -1,5 +1,7 @@
 <template>
     <div id="app">
+<!--        <navegacion />-->
+
         <h2>TAREAS QUE HACER</h2>
 
         <agregar-tarea />
@@ -18,10 +20,12 @@
 import Tareas from "../components/Tareas";
 import AgregarTarea from "../components/AgregarTarea";
 import CustomSelect from "../components/CustomSelect";
+// import Navegacion from "../components/Navegacion";
 
 export default {
     name: 'Home.vue',
     components: {
+        // Navegacion,
         Tareas,
         AgregarTarea,
         CustomSelect

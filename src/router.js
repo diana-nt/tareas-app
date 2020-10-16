@@ -2,7 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import YstdTasks from './views/YstdTasks.vue';
-// import Post from './components/Post.vue';
+// import Login from "./components/Login";
+import Login from './views/Login'
 Vue.use(Router);
 
 const router = new Router({
@@ -10,25 +11,34 @@ const router = new Router({
     routes: [
         {
             path: '/',
+            redirect: {
+                name: "login"
+            }
+        },
+        {
+            path: "/login",
+            name: "login",
+            component: Login
+        },
+        {
+            path: '/home',
+            name: 'Home',
             component: Home
         },
         {
             path: '/ystdtasks',
-            name: 'ystdtasks',
+            name: 'Ystdtasks',
             component: YstdTasks
         },
         /*{
-            path: '/posts/:id',
-            name: 'post',
-            component: Post,
-            meta: {
-                auth: true,
-            }
+            path: '/login',
+            name: 'Login',
+            component: Login
         },*/
-        {
+      /*  {
             path: '*',
-            redirect: '/'
-        }
+            redirect: '/home'
+        }*/
     ]
 });
 
