@@ -10,7 +10,7 @@
             @input="cambiarTab"/>
 
         <tareas />
-        <button @click="ordenarTareas">Ordenar</button>
+        <button class="ordenar" @click="ordenarTareas">Ordenar</button>
     </div>
 </template>
 
@@ -47,6 +47,16 @@ h2 {
     font-size: 60px;
     text-decoration: underline;
     text-decoration-color: paleturquoise;
+}
+
+.ordenar {
+    border-radius: 0;
+    height: 25 px;
+    width: 70px;
+    background-color: #afeeee;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 30px;
 }
 </style>
 
