@@ -51,7 +51,7 @@ h2 {
 
 .ordenar {
     border-radius: 0;
-    height: 25 px;
+    height: 25px;
     width: 70px;
     background-color: #afeeee;
     cursor: pointer;
