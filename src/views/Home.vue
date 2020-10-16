@@ -43,7 +43,7 @@ h2 {
 
     font-family: 'Oswald', sans-serif;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 30px;
     font-size: 60px;
     text-decoration: underline;
     text-decoration-color: paleturquoise;
