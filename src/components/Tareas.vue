@@ -7,7 +7,7 @@
                     <span :class="{ 'completed': tarea.completed }">{{ tarea.title }}</span>
                     <span class="checkmark"></span>
                 </label>
-                <button @click="eliminarTarea(tarea.id)"><font-awesome-icon icon="times" class="iconPosition"/></button>
+                <button @click="eliminarTarea(tarea.id)"><font-awesome-icon icon="times"/></button>
             </li>
         </ul>
     </div>
@@ -53,14 +53,14 @@ name: "Tareas.vue",
 
 <style scoped>
 
-li {
-    list-style: none;
-    margin-bottom: 20px;
-}
-
 ul{
     margin-left: 40px;
     width: 400px;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 20px;
 }
 
 .completed {
@@ -81,13 +81,14 @@ button{
     background-color: #afeeee;
     cursor: pointer;
     float: right;
-    /*margin-right: ;*/
+    padding: 0;
+    justify-content: center;
 }
 
-.iconPosition {
+/*.iconPosition {
     position: relative;
     right: 2.5px;
-}
+}*/
 
 
 .container {

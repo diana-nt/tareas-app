@@ -64,8 +64,7 @@ name: "AgreagarTarea.vue",
 
 div {
     display: flex;
-    /*text-align: center;*/
-    margin-left: 32%;
+    align-self: center;
     padding-bottom: 20px;
 }
 
@@ -74,23 +73,25 @@ input {
     border: solid 2px;
     padding: 7px 10px;
     border-right: none;
-    width: 40%;
+    width: 400px;
     color: black;
     border-color: black;
     font-size: 20px;
 }
 
+input[type=text]:focus {
+    border: none;
+}
+
 
 button {
     border: solid 2px;
-    padding: 7px 10px;
+    display: flex;
+    padding: 7px 30px;
     background: paleturquoise;
     cursor: pointer;
-    width: 10%;
     color: black;
     font-size: 22px;
-    text-align: center;
-    vertical-align: center;
 }
 
 </style>

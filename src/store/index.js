@@ -41,7 +41,7 @@ export default new Vuex.Store({
         title: 'Hacer trabajo de clase',
         completed: true,
         created_at: new Date('2019-02-10'),
-        completed_at: 15
+        completed_at: 18
       },
       {
         id: 5,

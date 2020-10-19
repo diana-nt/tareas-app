@@ -70,11 +70,13 @@ export default {
     margin: auto;
     margin-top: 200px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 #inputs {
-    margin-left: 85px;
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 input {
@@ -86,6 +88,7 @@ input {
     border-color: black;
     font-size: 20px;
     margin-bottom: 15px;
+    align-self: center;
 }
 
 button {
@@ -93,8 +96,8 @@ button {
     background: paleturquoise;
     cursor: pointer;
     width: 75px;
-    margin-top: 20px;
-    margin-left: 215px;
+    /*margin-top: 20px;*/
+    align-self: center;
     color: black;
     font-size: 20px;
     text-align: center;

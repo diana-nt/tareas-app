@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="home">
         <h2>TAREAS QUE HACER</h2>
         <agregar-tarea />
         <custom-select
@@ -39,8 +39,7 @@ export default {
 h2 {
 
     font-family: 'Oswald', sans-serif;
-    text-align: center;
-    padding-top: 30px;
+    align-self: center;
     font-size: 60px;
     text-decoration: underline;
     text-decoration-color: paleturquoise;
@@ -49,11 +48,18 @@ h2 {
 .ordenar {
     border-radius: 0;
     height: 25px;
-    width: 70px;
+    /*width: 70px;*/
+    width: fit-content;
     background-color: #afeeee;
     cursor: pointer;
     font-weight: bold;
     margin-top: 30px;
 }
+
+#home {
+    display: flex;
+    flex-direction: column;
+}
+
 </style>
 

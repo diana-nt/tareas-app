@@ -31,6 +31,13 @@ ul {
 li{
     list-style: none;
     margin-bottom: 20px;
+    padding: 0;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 </style>
