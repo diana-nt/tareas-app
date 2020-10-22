@@ -53,14 +53,28 @@ name: "Tareas.vue",
 
 <style scoped>
 
+div {
+    display: flex;
+    width: fit-content;
+    transform: translateX(5em);
+}
+
 ul{
-    margin-left: 40px;
-    width: 400px;
+    /*margin-left: 40px;*/
+    /*margin-left: 3rem;*/
+    /*width: 400px;*/
+    width: 50rem;
+    max-width: 95vw;
+    /*margin-right: 1rem;*/
+    margin: 0;
+    /*padding: 0;*/
+    padding: 1em 0em;
 }
 
 li {
     list-style: none;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+    margin-bottom: 1rem;
 }
 
 .completed {
@@ -102,6 +116,8 @@ button{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    max-width: 45rem;
+    overflow: auto;
 }
 
 .container input {

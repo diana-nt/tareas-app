@@ -26,6 +26,7 @@ export default {
 ul {
     text-align: center;
     font-size: 18px;
+    padding: 0;
 }
 
 li{

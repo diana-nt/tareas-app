@@ -63,9 +63,12 @@ name: "AgreagarTarea.vue",
 <style scoped>
 
 div {
-    display: flex;
+    /*display: flex;*/
+    display: inherit;
     align-self: center;
-    padding-bottom: 20px;
+    /*padding-bottom: 20px;*/
+    padding-bottom: 1em;
+    max-width: 100vw;
 }
 
 input {
@@ -73,10 +76,13 @@ input {
     border: solid 2px;
     padding: 7px 10px;
     border-right: none;
-    width: 400px;
+    /*width: 400px;*/
+    width: 26em;
+    max-width: inherit;
     color: black;
     border-color: black;
-    font-size: 20px;
+    /*font-size: 20px;*/
+    font-size: 1.3rem;
 }
 
 input[type=text]:focus {
@@ -85,13 +91,17 @@ input[type=text]:focus {
 
 
 button {
+    justify-content: space-evenly;
     border: solid 2px;
     display: flex;
-    padding: 7px 30px;
+    /*padding: 7px 30px;*/
+    padding: .32em 1.5em;
     background: paleturquoise;
     cursor: pointer;
     color: black;
     font-size: 22px;
+    width: 5em;
+    max-width: inherit;
 }
 
 </style>

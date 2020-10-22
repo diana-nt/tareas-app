@@ -40,25 +40,28 @@ h2 {
 
     font-family: 'Oswald', sans-serif;
     align-self: center;
-    font-size: 60px;
+    /*font-size: 60px;*/
+    font-size: 3.8rem;
     text-decoration: underline;
     text-decoration-color: paleturquoise;
 }
 
 .ordenar {
     border-radius: 0;
-    height: 25px;
+    /*height: 25px;*/
     /*width: 70px;*/
     width: fit-content;
     background-color: #afeeee;
     cursor: pointer;
     font-weight: bold;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
+    padding: .4em 1em;
 }
 
 #home {
     display: flex;
     flex-direction: column;
+
 }
 
 </style>

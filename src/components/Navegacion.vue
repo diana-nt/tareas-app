@@ -20,6 +20,12 @@ name: "Navegacion",
 
 <style scoped>
 
+#nav {
+    width: 97vw;
+    position: fixed;
+    z-index: 2;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
