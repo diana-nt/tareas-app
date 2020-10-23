@@ -3,6 +3,10 @@
         <navegacion v-if="authenticated" @logout="logout"/>
 <!--        <router-view @authenticated="setAuthenticated" />-->
         <router-view />
+        <footer>
+            <p>Hecho por: Diana</p>
+            <p>Año: 2020</p>
+        </footer>
     </div>
 </template>
 
@@ -95,6 +99,16 @@ img {
     border-width : 0;
     vertical-align : middle;
     -ms-interpolation-mode : bicubic;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    margin-top: 3em;
+    text-align: center;
+    padding: 0.5em;
+    background-color: #333333;
+    color: #ffffff;
 }
 
 </style>

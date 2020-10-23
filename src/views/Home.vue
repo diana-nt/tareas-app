@@ -10,10 +10,10 @@
             <tareas />
         </div>
         <button class="ordenar" @click="ordenarTareas">Ordenar</button>
-        <footer>
+        <!--<footer>
             <p>Hecho por: Diana</p>
             <p>Año: 2020</p>
-        </footer>
+        </footer>-->
     </div>
 </template>
 
@@ -69,17 +69,17 @@ h2 {
 #home {
     display: flex;
     flex-direction: column;
-    padding-top: 2em;
-
+    //padding-top: 2em;
+    padding: 2em;
 }
 .taskList{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 1em;
+    padding: 1em 0em;
 }
 
-footer {
+/*footer {
     position: sticky;
     bottom: 0;
     margin-top: 3em;
@@ -87,8 +87,7 @@ footer {
     padding: 0.5em;
     background-color: #333333;
     color: #ffffff;
-
-}
+}*/
 
 </style>
 

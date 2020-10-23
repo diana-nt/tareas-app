@@ -84,7 +84,7 @@ ul{
     /*padding: 0;*/
     /*padding: 1em 1em 1em 2em;*/
     padding-left: 2em;
-    padding-right: 1em;
+    /*padding-right: 1em;*/
     min-width: 100%;
 }
 
