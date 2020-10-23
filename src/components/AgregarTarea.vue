@@ -105,6 +105,7 @@ button {
     /*width: 5em;
     max-width: inherit;*/
     max-width: 20%;
+    width: inherit;
 }
 
 </style>

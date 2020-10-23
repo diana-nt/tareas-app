@@ -2,14 +2,17 @@
 <!--    <div>-->
         <ul>
             <li v-for="tarea in tareas" :key="tarea.id">
-                <label class="container">
-                    <input type="checkbox" v-model="tarea.completed" @input="completarTarea(tarea.id)">
-                    <span :class="{ 'completed': tarea.completed }">{{ tarea.title }}</span>
-                    <span class="checkmark"></span>
-                </label>
-                <div>
-                    <button @click="eliminarTarea(tarea.id)"><font-awesome-icon icon="times"/></button>
+                <div id="individualTask">
+                    <label class="container">
+                        <input type="checkbox" v-model="tarea.completed" @input="completarTarea(tarea.id)">
+                        <span :class="{ 'completed': tarea.completed }">{{ tarea.title }}</span>
+                        <span class="checkmark"></span>
+                    </label>
+<!--                    <div>-->
+                        <button @click="eliminarTarea(tarea.id)"><font-awesome-icon icon="times"/></button>
+<!--                    </div>-->
                 </div>
+                <hr>
             </li>
         </ul>
 <!--    </div>-->
@@ -55,6 +58,15 @@ name: "Tareas.vue",
 
 <style scoped>
 
+/*#individualTask {
+    display: flex;
+    justify-content: space-between;
+}*/
+
+hr {
+
+}
+
 /*div {
     display: flex;
     width: fit-content;
@@ -70,16 +82,20 @@ ul{
     /*margin-right: 1rem;*/
     margin: 0;
     /*padding: 0;*/
-    padding: 1em 1em 1em 2em;
+    /*padding: 1em 1em 1em 2em;*/
+    padding-left: 2em;
+    padding-right: 1em;
+    min-width: 100%;
 }
 
 li {
     list-style: none;
-    display: flex;
-    justify-content: space-between;
+    /*display: flex;
+    flex-direction: column;*/
+    /*justify-content: space-between;*/
     /*margin-bottom: 20px;*/
     margin-bottom: 1rem;
-    border-bottom: solid 1px #000;
+    /*border-bottom: solid 1px #000;*/
 }
 
 .completed {

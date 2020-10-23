@@ -10,6 +10,10 @@
             <tareas />
         </div>
         <button class="ordenar" @click="ordenarTareas">Ordenar</button>
+        <footer>
+            <p>Hecho por: Diana</p>
+            <p>Año: 2020</p>
+        </footer>
     </div>
 </template>
 
@@ -59,6 +63,7 @@ h2 {
     font-weight: bold;
     /*margin-top: 30px;*/
     padding: .4em 1em;
+    margin-left: 1em;
 }
 
 #home {
@@ -71,7 +76,18 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 1em 2em;
+    padding: 1em;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    margin-top: 3em;
+    text-align: center;
+    padding: 0.5em;
+    background-color: #333333;
+    color: #ffffff;
+
 }
 
 </style>
