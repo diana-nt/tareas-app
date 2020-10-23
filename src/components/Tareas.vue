@@ -129,8 +129,8 @@ button{
 .container {
     display: inline-block;
     position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
+    padding-left: 2em;
+    /*margin-bottom: 12px;*/
     cursor: pointer;
     font-size: 18px;
     -webkit-user-select: none;

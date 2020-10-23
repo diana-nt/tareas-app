@@ -63,7 +63,6 @@ h2 {
     font-weight: bold;
     /*margin-top: 30px;*/
     padding: .4em 1em;
-    margin-left: 1em;
 }
 
 #home {
