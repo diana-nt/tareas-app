@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c52bd6b-bb27-4626-8689-7bbb6084d235" name="Default Changelist" comment="Add small changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2c52bd6b-bb27-4626-8689-7bbb6084d235" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AgregarTarea.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AgregarTarea.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +65,7 @@
       <workItem from="1603087046545" duration="4260000" />
       <workItem from="1603181721863" duration="49000" />
       <workItem from="1603348676255" duration="10443000" />
-      <workItem from="1603432843215" duration="18650000" />
+      <workItem from="1603432843215" duration="19651000" />
     </task>
     <task id="LOCAL-00001" summary="Save app init">
       <created>1602238477211</created>
@@ -258,14 +256,20 @@
       <option name="project" value="LOCAL" />
       <updated>1603452881687</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Adjust login page">
+      <created>1603455670600</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1603455670600</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change file and add title" />
     <MESSAGE value="Add unversioned files" />
     <MESSAGE value="Render tasks and add delete button" />
     <MESSAGE value="Add input for adding tasks and some button CSS" />
@@ -290,7 +294,8 @@
     <MESSAGE value="Add hr and footer" />
     <MESSAGE value="Adjust padding" />
     <MESSAGE value="Add small changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add small changes" />
+    <MESSAGE value="Adjust login page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust login page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3686" y="611" width="298" height="224" key="#ESLint" timestamp="1602754803742">
@@ -305,10 +310,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="3528" y="545" width="604" height="357" key="#Notifications/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602238706082" />
-    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2" timestamp="1603453527449">
+    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2" timestamp="1603455670551">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603453527449" />
+    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603455670551" />
     <state x="2992" y="290" width="1478" height="879" key="DiffContextDialog" timestamp="1603453519880">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -365,10 +370,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="1224" height="495" key="GridCell.Tab.2.right/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602655996514" />
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603452340241">
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603455674178">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603452340241" />
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603455674178" />
     <state x="2981" y="635" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602836549955">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>

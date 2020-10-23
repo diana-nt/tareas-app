@@ -89,7 +89,8 @@ input {
 }
 
 input[type=text]:focus {
-    border: none;
+    outline: none;
+    border: 2px solid paleturquoise;
 }
 
 

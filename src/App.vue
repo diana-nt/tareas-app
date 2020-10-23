@@ -109,6 +109,7 @@ footer {
     padding: 0.5em;
     background-color: #333333;
     color: #ffffff;
+    z-index: 1;
 }
 
 </style>
