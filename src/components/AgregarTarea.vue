@@ -76,6 +76,7 @@ input {
     background: transparent;
     border: solid 2px;
     padding: 7px 10px;
+    /*padding: .3em .4em;*/
     border-right: none;
     width: inherit;
     max-width: 80%;

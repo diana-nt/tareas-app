@@ -104,7 +104,7 @@ img {
 footer {
     position: sticky;
     bottom: 0;
-    margin-top: 3em;
+    //margin-top: 3em;
     text-align: center;
     padding: 0.5em;
     background-color: #333333;

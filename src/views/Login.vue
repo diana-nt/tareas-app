@@ -64,30 +64,38 @@ export default {
 
 <style scoped>
 #login {
-    width: 500px;
+    width: 30em;
+    max-width: 100%;
     border: 2px solid black;
     background-color: #e8fcff;
     margin: auto;
-    margin-top: 200px;
+    /*margin-top: 200px;*/
+    margin-bottom: 12em;
+    margin-top: 12em;
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
 #inputs {
+    align-self: center;
     display: flex;
     flex-direction: column;
+    width: fit-content;
+    max-width: 100%;
 }
 
 input {
     background: white;
     border: solid 2px;
-    padding: 7px 10px;
-    width: 300px;
+    /*padding: 7px 10px;*/
+    padding: .3em .4em;
+    width: 16em;
+    max-width: 100%;
     color: black;
     border-color: black;
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 1.4rem;
+    margin-bottom: .6em;
     align-self: center;
 }
 
@@ -99,7 +107,7 @@ button {
     /*margin-top: 20px;*/
     align-self: center;
     color: black;
-    font-size: 20px;
+    font-size: 1.4rem;
     text-align: center;
 }
 
