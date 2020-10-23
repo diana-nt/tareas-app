@@ -72,7 +72,7 @@ export default {
     height: 47px;
     line-height: 47px;
     /*margin-left: 50px;*/
-    transform: translateX(3.2em);
+    /*transform: translateX(3.2em);*/
     z-index: 1;
 }
 

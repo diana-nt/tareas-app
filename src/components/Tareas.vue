@@ -1,5 +1,5 @@
 <template>
-    <div>
+<!--    <div>-->
         <ul>
             <li v-for="tarea in tareas" :key="tarea.id">
                 <label class="container">
@@ -7,10 +7,12 @@
                     <span :class="{ 'completed': tarea.completed }">{{ tarea.title }}</span>
                     <span class="checkmark"></span>
                 </label>
-                <button @click="eliminarTarea(tarea.id)"><font-awesome-icon icon="times"/></button>
+                <div>
+                    <button @click="eliminarTarea(tarea.id)"><font-awesome-icon icon="times"/></button>
+                </div>
             </li>
         </ul>
-    </div>
+<!--    </div>-->
 
 </template>
 
@@ -53,28 +55,31 @@ name: "Tareas.vue",
 
 <style scoped>
 
-div {
+/*div {
     display: flex;
     width: fit-content;
-    transform: translateX(5em);
-}
+    !*transform: translateX(5em);*!
+}*/
 
 ul{
     /*margin-left: 40px;*/
     /*margin-left: 3rem;*/
     /*width: 400px;*/
-    width: 50rem;
-    max-width: 95vw;
+    /*width: 50rem;*/
+    /*max-width: 95vw;*/
     /*margin-right: 1rem;*/
     margin: 0;
     /*padding: 0;*/
-    padding: 1em 0em;
+    padding: 1em 1em 1em 2em;
 }
 
 li {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
     /*margin-bottom: 20px;*/
     margin-bottom: 1rem;
+    border-bottom: solid 1px #000;
 }
 
 .completed {
@@ -116,8 +121,10 @@ button{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    max-width: 45rem;
-    overflow: auto;
+    /*max-width: 45rem;
+    overflow: auto;*/
+    max-width: 90%;
+    overflow-wrap: break-word;
 }
 
 .container input {

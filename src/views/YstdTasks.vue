@@ -39,6 +39,7 @@ div {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 2em;
 }
 
 </style>

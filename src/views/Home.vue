@@ -2,11 +2,13 @@
     <div id="home">
         <h2>TAREAS QUE HACER</h2>
         <agregar-tarea />
-        <custom-select
-            :options="['Tareas', 'Pendientes', 'Finalizadas']"
-            default="Tareas"
-            @input="cambiarTab"/>
-        <tareas />
+        <div class="taskList">
+            <custom-select
+                :options="['Tareas', 'Pendientes', 'Finalizadas']"
+                default="Tareas"
+                @input="cambiarTab"/>
+            <tareas />
+        </div>
         <button class="ordenar" @click="ordenarTareas">Ordenar</button>
     </div>
 </template>
@@ -34,7 +36,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 h2 {
 
@@ -44,6 +46,7 @@ h2 {
     font-size: 3.8rem;
     text-decoration: underline;
     text-decoration-color: paleturquoise;
+    margin-bottom: 1em;
 }
 
 .ordenar {
@@ -61,7 +64,14 @@ h2 {
 #home {
     display: flex;
     flex-direction: column;
+    padding-top: 2em;
 
+}
+.taskList{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1em 2em;
 }
 
 </style>

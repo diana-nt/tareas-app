@@ -63,8 +63,9 @@ name: "AgreagarTarea.vue",
 <style scoped>
 
 div {
-    /*display: flex;*/
-    display: inherit;
+    display: flex;
+    width: 40em;
+    /*display: inherit;*/
     align-self: center;
     /*padding-bottom: 20px;*/
     padding-bottom: 1em;
@@ -76,9 +77,10 @@ input {
     border: solid 2px;
     padding: 7px 10px;
     border-right: none;
-    /*width: 400px;*/
-    width: 26em;
-    max-width: inherit;
+    width: inherit;
+    max-width: 80%;
+    /*width: 26em;
+    max-width: inherit;*/
     color: black;
     border-color: black;
     /*font-size: 20px;*/
@@ -100,8 +102,9 @@ button {
     cursor: pointer;
     color: black;
     font-size: 22px;
-    width: 5em;
-    max-width: inherit;
+    /*width: 5em;
+    max-width: inherit;*/
+    max-width: 20%;
 }
 
 </style>
