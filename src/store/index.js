@@ -1,13 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import createPersistedState from 'vuex-persistedstate';
+import moment from 'moment';
+// import createPersistedState from 'vuex-persistedstate';
 import account from './account';
+import {TaskService} from "../services/tasks";
+import {Task} from "../entities/task";
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   strict: true,
-  plugins: [createPersistedState()],
+  // plugins: [createPersistedState()],
   modules: {
     account
   },
@@ -15,7 +18,7 @@ export default new Vuex.Store({
     fechaActualizacionEstado: '',
     actual: 'tareas',
     tareas: [
-      {
+      /*{
         id: 1,
         title: 'Aprender Vue',
         completed: false,
@@ -41,7 +44,7 @@ export default new Vuex.Store({
         title: 'Hacer trabajo de clase',
         completed: true,
         created_at: new Date('2019-02-10'),
-        completed_at: 22
+        completed_at: 27
       },
       {
         id: 5,
@@ -49,7 +52,7 @@ export default new Vuex.Store({
         completed: false,
         created_at: new Date('2004-08-13'),
         completed_at: ''
-      }
+      }*/
     ],
     completadas: []
   },
@@ -63,11 +66,19 @@ export default new Vuex.Store({
         completed_at: tarea.completed_at
       }
       state.tareas.push(nuevaTarea);
+      TaskService.addTaskToStorage(nuevaTarea);
     },
     COMPLETAR_TAREA(state, tareaId){
       const tarea = state.tareas.find(tarea => tarea.id === tareaId);
       tarea.completed = !tarea.completed
-      tarea.completed_at = new Date().getDate()
+      if(tarea.completed == true){
+        tarea.completed_at = moment().subtract(1, 'days').toDate();
+      }else{
+        if(tarea.completed_at){
+          tarea.completed_at = '';
+        }
+      }
+      // console.log(state.completadas)
     },
     ELIMINAR_TAREA(state, tareaId){
       const index = state.tareas.findIndex(tarea => tarea.id === tareaId);
@@ -84,7 +95,13 @@ export default new Vuex.Store({
     },
     AGREGAR_COMPLETADAS(state) {
       state.completadas = state.tareas.filter(tarea => tarea.completed === true);
-    }
+    },
+    SET_TASKS(state,data){
+      state.tareas = [];
+      data.forEach((task)=>{
+        state.tareas.push(new Task(task));
+      })
+    },
   },
   actions: {
     agregarTarea(context, tarea){
@@ -108,7 +125,10 @@ export default new Vuex.Store({
     },
     agregarCompletadas(context){
       context.commit('AGREGAR_COMPLETADAS');
-    }
+    },
+    setTasks(context,data){
+      context.commit('SET_TASKS',data)
+    },
   },
   getters: {
     getTareas(state){
@@ -129,8 +149,12 @@ export default new Vuex.Store({
       return state.tareas;
     },
     getCompletadasAyer(state){
-      const diaActual = new Date().getDate();
-      return state.completadas.filter((completada => completada.completed_at === (diaActual - 1)))
-    }
+      // const diaActual = new Date().getDate();
+      // let today = new Date();
+      let yesterday = moment().subtract(1, 'days').toDate();
+      return state.completadas.filter((completada => completada.completed_at === yesterday))
+    },
   },
 })
+
+

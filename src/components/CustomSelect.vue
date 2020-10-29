@@ -73,7 +73,7 @@ export default {
     line-height: 47px;
     /*margin-left: 50px;*/
     /*transform: translateX(3.2em);*/
-    z-index: 1;
+    z-index: 2;
 }
 
 .custom-select .selected {

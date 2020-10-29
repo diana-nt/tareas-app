@@ -13,6 +13,7 @@
 <script>
 import Navegacion from "./components/Navegacion";
 import {mapGetters} from "vuex";
+import {UserService} from "./services/user";
 
 export default {
     name: "App",
@@ -31,6 +32,8 @@ export default {
     mounted() {
         if(!this.authenticated) {
             this.$router.push({ name: "login" });
+        }else{
+            this.$router.replace({name: 'Home'})
         }
     },
     methods: {
@@ -39,13 +42,17 @@ export default {
         },*/
         logout() {
             // this.authenticated = false;
-            this.$store.dispatch('logout');
+            // this.$store.dispatch('logout');
+            UserService.deleteSessionInStorage();
         }
     },
     computed: {
         ...mapGetters({authenticated:"getAuthenticated"}),
     },
     created() {
+        if (UserService.getSessionStorage()){
+            this.$store.dispatch('login');
+        }
             const envJSON = require('../env.variables.json');
             if (envJSON['development']){
                 console.log('Estás en desarrollo')

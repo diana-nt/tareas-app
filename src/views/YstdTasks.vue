@@ -2,20 +2,28 @@
     <div>
         <h2>COMPLETADAS AYER</h2>
         <ul>
-            <li v-for="completada in completadas" :key="completada.id">{{ completada.title }}</li>
+<!--            <li v-for="completada in completadas" :key="completada.id">{{ completada.title }}</li>-->
+            <li v-for="completada in completadasAyer" :key="completada.id">{{ completada.title }}
+            <hr>
+            </li>
         </ul>
     </div>
 </template>
 
 <script>
 import {mapGetters} from 'vuex';
+import {TaskService} from "../services/tasks";
+// import {TaskService} from "./tasks.service";
 
 export default {
     name: "TareasCompletadasAyer",
     methods: {
     },
     computed: {
-        ...mapGetters({completadas:"getCompletadasAyer"})
+        ...mapGetters({completadas:"getCompletadasAyer"}),
+        completadasAyer() {
+            return TaskService.getTasksCompletedYesterday()
+        }
     }
 
 }

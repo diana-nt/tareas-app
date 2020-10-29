@@ -11,6 +11,7 @@
 
 <script>
 import {mapGetters} from "vuex";
+import {UserService} from "../services/user";
 
 export default {
     name: 'Login',
@@ -36,13 +37,28 @@ export default {
             }
         }*/
         login() {
-            if(this.input.username != "" && this.input.password != "") {
-                if(this.input.username == this.account.username && this.input.password == this.account.password) {
-                    this.$store.dispatch('login');
-                    this.$router.replace({ name: "Home" });
-                } else {
+            if(this.input.username.length && this.input.password.length) {
+
+                let resultLogin = UserService.login(this.input)
+                if (!resultLogin){
                     console.log("Nombre de usuario y/o contraseña incorrecto/s");
+
+                }else{
+                    UserService.saveSessionInStorage();
+                    let resultSaveInStorage = UserService.getSessionStorage();
+                    if (resultSaveInStorage){
+                        this.$store.dispatch('login');
+                        this.$router.replace({ name: "Home" });
+                    }
                 }
+
+
+                // if(this.input.username == this.account.username && this.input.password == this.account.password) {
+                //     this.$store.dispatch('login');
+                //     this.$router.replace({ name: "Home" });
+                // } else {
+                //     console.log("Nombre de usuario y/o contraseña incorrecto/s");
+                // }
             } else {
                 console.log("Debes introducir un nombre de usuario y una contraseña");
             }
@@ -50,7 +66,7 @@ export default {
     },
     computed: {
         ...mapGetters({authenticated:"getAuthenticated"}),
-        ...mapGetters({account:"getMockAccount"})
+        // ...mapGetters({account:"getMockAccount"})
     },
     directives: {
         focus: {

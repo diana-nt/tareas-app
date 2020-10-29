@@ -14,6 +14,10 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+// import {TaskService} from "../services/tasks";
+import { v4 as uuidv4 } from 'uuid';
+
+
 
 library.add(faPlus)
 
@@ -24,14 +28,15 @@ name: "AgreagarTarea.vue",
     },
     data() {
         return {
-            newId: 6,
+            tareas: [],
+            newId: null,
             title:'',
             completed: false,
             created_at: new Date(),
             completed_at: ''
         }
     },
-    mounted() {
+    /*mounted() {
         if (localStorage.getItem('tareas')) {
             try {
                 this.tareas = JSON.parse(localStorage.getItem('tareas'));
@@ -39,15 +44,25 @@ name: "AgreagarTarea.vue",
                 localStorage.removeItem('tareas');
             }
         }
-    },
+    },*/
     methods:{
         agregarTarea(){
+            // this.newId = this.tareas.length ? this.tareas.length++ : 1;
+            /*if (localStorage.getItem('tareas')) {
+                this.newId = JSON.parse(localStorage.getItem('tareas')).length++;
+            } else {
+                this.newId = 0;
+            }*/
+            // this.newId = this.tareas.length++;
+            this.newId = uuidv4();
             this.$store.dispatch('agregarTarea', this);
-            this.newId ++;
-            this.title = '';
             this.$store.dispatch('actualizarFecha');
             this.completed_at = '';
+            // TaskService.saveTasksInStorage(this.tareas)
+            // console.log(this.tareas)
+            this.title = '';
         },
+
     },
     directives: {
         focus: {
@@ -93,7 +108,6 @@ input[type=text]:focus {
     border: 2px solid paleturquoise;
 }
 
-
 button {
     justify-content: space-evenly;
     border: solid 2px;
@@ -108,6 +122,10 @@ button {
     max-width: inherit;*/
     max-width: 20%;
     width: inherit;
+}
+
+button:hover{
+    background-color: darkgray;
 }
 
 </style>

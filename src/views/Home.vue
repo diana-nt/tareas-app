@@ -7,7 +7,10 @@
                 :options="['Tareas', 'Pendientes', 'Finalizadas']"
                 default="Tareas"
                 @input="cambiarTab"/>
-            <tareas />
+            <tareas
+                @deleteTask = 'deleteTask'
+                @completeTask = 'completeTask'
+            />
         </div>
         <button class="ordenar" @click="ordenarTareas">Ordenar</button>
         <!--<footer>
@@ -21,6 +24,7 @@
 import Tareas from "../components/Tareas";
 import AgregarTarea from "../components/AgregarTarea";
 import CustomSelect from "../components/CustomSelect";
+import {TaskService} from "../services/tasks";
 
 export default {
     name: 'Home.vue',
@@ -35,7 +39,24 @@ export default {
         },
         ordenarTareas(){
             this.$store.dispatch('ordenarTareas')
-        }
+        },
+        deleteTask(id) {
+            this.$store.dispatch("eliminarTarea", id);
+            this.$store.dispatch('actualizarFecha');
+            // this.$store.dispatch("cambiarId");
+            let finalTasks = this.$store.getters.getTareas;
+            // console.log(finalTasks)
+            TaskService.saveTasksInStorage(finalTasks);
+        },
+        completeTask(id) {
+            this.$store.dispatch("completarTarea", id);
+            this.$store.dispatch('actualizarFecha');
+            let finalTasks = this.$store.getters.getTareas;
+            // console.log(finalTasks)
+            TaskService.saveTasksInStorage(finalTasks);
+            // console.log(TaskService.getCompletedTasks())
+
+        },
     }
 }
 </script>
@@ -88,5 +109,8 @@ h2 {
     color: #ffffff;
 }*/
 
+button:hover{
+    background-color: darkgray;
+}
 </style>
 

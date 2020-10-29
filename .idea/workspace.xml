@@ -2,8 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c52bd6b-bb27-4626-8689-7bbb6084d235" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/entities/task/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/task/task.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/task/task.mock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/task/task.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/tasks/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/tasks/tasks.mocks.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/tasks/tasks.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/tasks/tasks.spec.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/user/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/user/user.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AgregarTarea.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AgregarTarea.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CustomSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CustomSelect.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tareas.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tareas.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/YstdTasks.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/YstdTasks.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +52,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../todo-app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,6 +64,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/services" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
@@ -65,7 +88,11 @@
       <workItem from="1603087046545" duration="4260000" />
       <workItem from="1603181721863" duration="49000" />
       <workItem from="1603348676255" duration="10443000" />
-      <workItem from="1603432843215" duration="19651000" />
+      <workItem from="1603432843215" duration="21004000" />
+      <workItem from="1603695547081" duration="8375000" />
+      <workItem from="1603782000159" duration="13594000" />
+      <workItem from="1603868405500" duration="14582000" />
+      <workItem from="1603954708908" duration="13919000" />
     </task>
     <task id="LOCAL-00001" summary="Save app init">
       <created>1602238477211</created>
@@ -263,14 +290,20 @@
       <option name="project" value="LOCAL" />
       <updated>1603455670600</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Change input focus">
+      <created>1603456673515</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1603456673515</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add unversioned files" />
     <MESSAGE value="Render tasks and add delete button" />
     <MESSAGE value="Add input for adding tasks and some button CSS" />
     <MESSAGE value="Add functionality to input" />
@@ -295,13 +328,14 @@
     <MESSAGE value="Adjust padding" />
     <MESSAGE value="Add small changes" />
     <MESSAGE value="Adjust login page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjust login page" />
+    <MESSAGE value="Change input focus" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change input focus" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3686" y="611" width="298" height="224" key="#ESLint" timestamp="1602754803742">
+    <state x="3686" y="611" width="298" height="224" key="#ESLint" timestamp="1603786138914">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3686" y="611" width="298" height="224" key="#ESLint/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602754803742" />
+    <state x="3686" y="611" width="298" height="224" key="#ESLint/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603786138914" />
     <state x="2829" y="401" width="732" height="644" key="#Inspections" timestamp="1602832217751">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -310,18 +344,18 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="3528" y="545" width="604" height="357" key="#Notifications/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602238706082" />
-    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2" timestamp="1603455670551">
+    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2" timestamp="1603456673437">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603455670551" />
+    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603456673437" />
     <state x="2992" y="290" width="1478" height="879" key="DiffContextDialog" timestamp="1603453519880">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2992" y="290" width="1478" height="879" key="DiffContextDialog/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603453519880" />
-    <state x="3618" y="478" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603181768669">
+    <state x="3618" y="478" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603956880823">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3618" y="478" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603181768669" />
+    <state x="3618" y="478" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603956880823" />
     <state width="1224" height="495" key="GridCell.Tab.0.bottom" timestamp="1602655996514">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -370,17 +404,21 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="1224" height="495" key="GridCell.Tab.2.right/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602655996514" />
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603455674178">
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603456677809">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603455674178" />
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603456677809" />
     <state x="2981" y="635" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602836549955">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2981" y="635" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602836549955" />
-    <state x="3531" y="459" width="618" height="558" key="find.popup" timestamp="1603454672691">
+    <state x="3531" y="459" width="618" height="558" key="find.popup" timestamp="1603966089661">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3531" y="459" width="618" height="558" key="find.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603454672691" />
+    <state x="3531" y="459" width="618" height="558" key="find.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603966089661" />
+    <state x="2863" y="329" width="672" height="678" key="search.everywhere.popup" timestamp="1603872840343">
+      <screen x="1920" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2863" y="329" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603872840343" />
   </component>
 </project>

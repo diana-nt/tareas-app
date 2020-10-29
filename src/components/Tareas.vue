@@ -1,21 +1,18 @@
 <template>
-<!--    <div>-->
         <ul>
             <li v-for="tarea in tareas" :key="tarea.id">
                 <div id="individualTask">
                     <label class="container">
-                        <input type="checkbox" v-model="tarea.completed" @input="completarTarea(tarea.id)">
+                        <input type="checkbox" v-model="tarea.completed" @input="$emit('completeTask', tarea.id)">
                         <span :class="{ 'completed': tarea.completed }">{{ tarea.title }}</span>
                         <span class="checkmark"></span>
                     </label>
-<!--                    <div>-->
-                        <button @click="eliminarTarea(tarea.id)"><font-awesome-icon icon="times"/></button>
-<!--                    </div>-->
+                    <div class="daysFromCompleted" v-if="tarea.completed">Completed {{tarea.getDaysFromCompleted()}}</div>
+                    <button @click="$emit('deleteTask', tarea.id)"><font-awesome-icon icon="times"/></button>
                 </div>
                 <hr>
             </li>
         </ul>
-<!--    </div>-->
 
 </template>
 
@@ -24,33 +21,28 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {mapGetters} from "vuex";
+import {TaskService} from "../services/tasks";
+
 
 library.add(faTimes);
 
 export default {
 name: "Tareas.vue",
-
     components: {
-        FontAwesomeIcon
+        FontAwesomeIcon,
     },
 
     computed: {
-        ...mapGetters({tareas:"getTareasAMostrar"}),
+        ...mapGetters({tareas:"getTareasAMostrar"})
     },
 
     created() {
+        let tasksStorage = TaskService.getTasksFromStorage();
+        this.$store.dispatch('setTasks',tasksStorage)
         this.$store.dispatch('agregarCompletadas');
     },
 
     methods: {
-        completarTarea(id) {
-            this.$store.dispatch("completarTarea", id);
-            this.$store.dispatch('actualizarFecha');
-        },
-        eliminarTarea(id) {
-            this.$store.dispatch("eliminarTarea", id);
-            this.$store.dispatch('actualizarFecha');
-        },
     },
 
 }
@@ -58,13 +50,17 @@ name: "Tareas.vue",
 
 <style scoped>
 
-/*#individualTask {
-    display: flex;
-    justify-content: space-between;
-}*/
+#individualTask {
+    display: grid;
+    /*grid-template-columns: repeat(3, 1fr);*/
+    grid-template-columns: 70% 20% 7%;
+    grid-gap: 10px;
+    /*grid-auto-rows: minmax(10px, auto);*/
+}
 
-hr {
-
+.daysFromCompleted{
+    grid-column: 2;
+    overflow-wrap: break-word;
 }
 
 /*div {
@@ -117,6 +113,8 @@ button{
     cursor: pointer;
     float: right;
     padding: 0;
+    grid-column: 3;
+    justify-self: right;
     justify-content: center;
 }
 
@@ -127,6 +125,7 @@ button{
 
 
 .container {
+    grid-column: 1;
     display: inline-block;
     position: relative;
     padding-left: 2em;
