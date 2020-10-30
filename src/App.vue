@@ -5,6 +5,7 @@
 <!--        <router-view @authenticated="setAuthenticated" />-->
         <router-view />
         <footer>
+            <locale-switcher />
             <p>{{ $t('footerName') }}</p>
             <p>{{ $t('footerYear') }}</p>
         </footer>
@@ -15,12 +16,12 @@
 import Navegacion from "./components/Navegacion";
 import {mapGetters} from "vuex";
 import {UserService} from "./services/user";
-// import LocaleSwitcher from "./components/LocaleSwitcher";
+import LocaleSwitcher from "./components/LocaleSwitcher";
 
 export default {
     name: "App",
     components: {
-        // LocaleSwitcher,
+        LocaleSwitcher,
         Navegacion
     },
     /*data() {
@@ -112,14 +113,30 @@ img {
 }
 
 footer {
-    position: sticky;
-    bottom: 0;
     //margin-top: 3em;
-    text-align: center;
+    //text-align: center;
     padding: 0.5em;
     background-color: #333333;
     color: #ffffff;
-    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 1500px) and (min-width: 450px) {
+    footer {
+        position: sticky;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 450px) and (min-width: 60px) {
+    footer {
+        position: absolute;
+        width: 100%;
+    }
 }
 
 </style>

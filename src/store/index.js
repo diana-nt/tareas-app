@@ -72,7 +72,8 @@ export default new Vuex.Store({
       const tarea = state.tareas.find(tarea => tarea.id === tareaId);
       tarea.completed = !tarea.completed
       if(tarea.completed == true){
-        tarea.completed_at = moment().subtract(1, 'days').toDate();
+        // tarea.completed_at = moment().subtract(1, 'days').toDate();
+        tarea.completed_at = new Date();
       }else{
         if(tarea.completed_at){
           tarea.completed_at = '';

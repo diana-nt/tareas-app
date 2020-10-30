@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c52bd6b-bb27-4626-8689-7bbb6084d235" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/LocaleSwitcher.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/spain.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/united-kingdom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugins/i18n.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AgregarTarea.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AgregarTarea.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LocaleSwitcher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LocaleSwitcher.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navegacion.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navegacion.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Tareas.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tareas.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/task/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/task/task.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/i18n.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/YstdTasks.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/YstdTasks.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +78,7 @@
       <workItem from="1603782000159" duration="13594000" />
       <workItem from="1603868405500" duration="14582000" />
       <workItem from="1603954708908" duration="13944000" />
-      <workItem from="1604041111042" duration="16483000" />
+      <workItem from="1604041111042" duration="20757000" />
     </task>
     <task id="LOCAL-00001" summary="Save app init">
       <created>1602238477211</created>
@@ -306,14 +297,20 @@
       <option name="project" value="LOCAL" />
       <updated>1604048253691</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Add translation to english">
+      <created>1604058364737</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1604058364737</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add functionality to input" />
     <MESSAGE value="Add checkboxes" />
     <MESSAGE value="Add custom select" />
     <MESSAGE value="Add sort button" />
@@ -338,7 +335,8 @@
     <MESSAGE value="Change input focus" />
     <MESSAGE value="Save several changes" />
     <MESSAGE value="Add media queries to CSS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add media queries to CSS" />
+    <MESSAGE value="Add translation to english" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add translation to english" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3686" y="611" width="298" height="224" key="#ESLint" timestamp="1603786138914">
@@ -353,10 +351,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="3528" y="545" width="604" height="357" key="#Notifications/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602238706082" />
-    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2" timestamp="1604048253575">
+    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2" timestamp="1604058364673">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604048253575" />
+    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604058364673" />
     <state x="2992" y="290" width="1478" height="879" key="DiffContextDialog" timestamp="1603453519880">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -413,10 +411,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="1224" height="495" key="GridCell.Tab.2.right/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602655996514" />
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604048256946">
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604058367647">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604048256946" />
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604058367647" />
     <state x="2981" y="635" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602836549955">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -425,9 +423,9 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="3531" y="459" width="618" height="558" key="find.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604056590283" />
-    <state x="2863" y="329" width="672" height="678" key="search.everywhere.popup" timestamp="1604043391199">
+    <state x="2863" y="329" width="672" height="678" key="search.everywhere.popup" timestamp="1604058659231">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2863" y="329" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604043391199" />
+    <state x="2863" y="329" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604058659231" />
   </component>
 </project>

@@ -12,9 +12,10 @@ export class Task{
     }
 
     getDaysFromCompleted(){
-        /*if(i18n.locale === 'es'){
-            moment.locale('es')
-        }*/
-        return moment(this.completed_at).fromNow();
+        // return moment(this.completed_at).fromNow();
+        let fechaActual = moment(Date.now());
+        let fechaCompletado = moment(this.completed_at);
+        // console.log(fechaActual.diff(fechaCompletado, 'days'))
+        return fechaActual.diff(fechaCompletado, 'days')
     }
 }

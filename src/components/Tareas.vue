@@ -7,7 +7,9 @@
                         <span :class="{ 'completed': tarea.completed }">{{ tarea.title }}</span>
                         <span class="checkmark"></span>
                     </label>
-                    <div class="daysFromCompleted" v-if="tarea.completed">{{ $t('completed')}} {{tarea.getDaysFromCompleted()}}</div>
+                    <div class="daysFromCompleted" v-if="tarea.completed">
+                        {{ $tc('completed',getDaysFromCompleted(tarea), {numdays: tarea.getDaysFromCompleted()})}}
+                    </div>
                     <button @click="$emit('deleteTask', tarea.id)"><font-awesome-icon icon="times"/></button>
                 </div>
                 <hr>
@@ -43,6 +45,15 @@ name: "Tareas.vue",
     },
 
     methods: {
+        getDaysFromCompleted(tarea){
+            if (tarea.getDaysFromCompleted() === 0){
+                return 0;
+            } else if (tarea.getDaysFromCompleted() === 1){
+                return 1;
+            } else {
+                return 2;
+            }
+        }
     },
 
 }

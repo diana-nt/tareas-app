@@ -5,7 +5,7 @@ Vue.use(VueI18n)
 
 export const i18n = new VueI18n({
     locale: localStorage.getItem('lang'),
-    // fallbackLocale: 'es',
+    fallbackLocale: 'es',
     messages: {
         es: {
             //Home page
@@ -41,7 +41,7 @@ export const i18n = new VueI18n({
             loginButton: '¡Vamos allá!',
 
             //Tasks completed x days ago
-            completed: 'Completada'
+            completed: 'Completada hoy | Completada hace un día | Completada hace {numdays} días'
         },
         en: {
             //Home page
@@ -77,7 +77,7 @@ export const i18n = new VueI18n({
             loginButton: "Let's go!",
 
             //Completed x days ago
-            completed: 'Completed'
+            completed: 'Completed today | Completed a day ago | Completed {numdays} days ago'
         }
     }
 })
