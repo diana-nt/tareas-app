@@ -207,7 +207,7 @@ button{
 
 .container .checkmark:after {
     left: 5px;
-    top: 0;
+    top: 2px;
     width: 5px;
     height: 10px;
     border: solid black;
