@@ -3,7 +3,7 @@
         <input
             type="text"
             v-model="title" name="title"
-            placeholder="¿Qué tienes que hacer?"
+            :placeholder= "$t('addTaskPlaceholder')"
             @keyup.enter="agregarTarea"
             v-focus>
         <button @click="agregarTarea"><font-awesome-icon icon="plus" /></button>

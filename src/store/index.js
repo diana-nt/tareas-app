@@ -141,9 +141,9 @@ export default new Vuex.Store({
       return state.tareas.filter(tarea => tarea.completed === false);
     },
     getTareasAMostrar(state, getters){
-      if (state.actual === 'finalizadas'){
+      if (state.actual === 'finalizadas' || state.actual === 'finished'){
         return getters.getTareasFinalizadas;
-      }else if (state.actual === 'pendientes'){
+      }else if (state.actual === 'pendientes' || state.actual === 'pending'){
         return getters.getTareasPendientes;
       }
       return state.tareas;

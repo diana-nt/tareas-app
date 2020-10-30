@@ -1,18 +1,18 @@
 <template>
     <div id="home">
-        <h2>TAREAS QUE HACER</h2>
+        <h2>{{ $t('homePage').toUpperCase() }}</h2>
         <agregar-tarea />
         <div class="taskList">
             <custom-select
-                :options="['Tareas', 'Pendientes', 'Finalizadas']"
-                default="Tareas"
+                :options="[ $t('option1') , $t('option2'), $t('option3')]"
+                :default="$t('option1')"
                 @input="cambiarTab"/>
             <tareas
                 @deleteTask = 'deleteTask'
                 @completeTask = 'completeTask'
             />
         </div>
-        <button class="ordenar" @click="ordenarTareas">Ordenar</button>
+        <button class="ordenar" @click="ordenarTareas">{{ $t('sortButton') }}</button>
         <!--<footer>
             <p>Hecho por: Diana</p>
             <p>Año: 2020</p>
@@ -25,6 +25,7 @@ import Tareas from "../components/Tareas";
 import AgregarTarea from "../components/AgregarTarea";
 import CustomSelect from "../components/CustomSelect";
 import {TaskService} from "../services/tasks";
+
 
 export default {
     name: 'Home.vue',
@@ -55,7 +56,6 @@ export default {
             // console.log(finalTasks)
             TaskService.saveTasksInStorage(finalTasks);
             // console.log(TaskService.getCompletedTasks())
-
         },
     }
 }

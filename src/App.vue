@@ -1,11 +1,12 @@
 <template>
     <div id="app">
         <navegacion v-if="authenticated" @logout="logout"/>
+<!--        <locale-switcher />-->
 <!--        <router-view @authenticated="setAuthenticated" />-->
         <router-view />
         <footer>
-            <p>Hecho por: Diana</p>
-            <p>Año: 2020</p>
+            <p>{{ $t('footerName') }}</p>
+            <p>{{ $t('footerYear') }}</p>
         </footer>
     </div>
 </template>
@@ -14,10 +15,12 @@
 import Navegacion from "./components/Navegacion";
 import {mapGetters} from "vuex";
 import {UserService} from "./services/user";
+// import LocaleSwitcher from "./components/LocaleSwitcher";
 
 export default {
     name: "App",
     components: {
+        // LocaleSwitcher,
         Navegacion
     },
     /*data() {
@@ -42,7 +45,7 @@ export default {
         },*/
         logout() {
             // this.authenticated = false;
-            // this.$store.dispatch('logout');
+            this.$store.dispatch('logout');
             UserService.deleteSessionInStorage();
         }
     },

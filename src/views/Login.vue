@@ -1,11 +1,11 @@
 <template>
     <div id="login">
-        <h2>Inicia sesión</h2>
+        <h2>{{ $t('loginTitle') }}</h2>
         <div id="inputs">
-            <input type="text" name="username" v-model="input.username" placeholder="Username" v-focus/>
-            <input type="password" name="password" v-model="input.password" placeholder="Password" @keyup.enter="login" />
+            <input type="text" name="username" v-model="input.username" :placeholder="$t('usernamePlaceholder')" v-focus/>
+            <input type="password" name="password" v-model="input.password" :placeholder="$t('passwordPlaceholder')" @keyup.enter="login" />
         </div>
-        <button type="button" @click="login()">Login</button>
+        <button type="button" @click="login()">{{ $t('loginButton') }}</button>
     </div>
 </template>
 
@@ -119,12 +119,17 @@ button {
     border: solid 2px;
     background: paleturquoise;
     cursor: pointer;
-    width: 75px;
-    /*margin-top: 20px;*/
+    width: 110px;
+    margin-top: 20px;
     align-self: center;
     color: black;
     font-size: 1.4rem;
     text-align: center;
+    padding: 5px;
+}
+
+button:hover{
+    background-color: darkgray;
 }
 
 </style>

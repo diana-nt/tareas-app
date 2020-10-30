@@ -7,7 +7,7 @@
                         <span :class="{ 'completed': tarea.completed }">{{ tarea.title }}</span>
                         <span class="checkmark"></span>
                     </label>
-                    <div class="daysFromCompleted" v-if="tarea.completed">Completed {{tarea.getDaysFromCompleted()}}</div>
+                    <div class="daysFromCompleted" v-if="tarea.completed">{{ $t('completed')}} {{tarea.getDaysFromCompleted()}}</div>
                     <button @click="$emit('deleteTask', tarea.id)"><font-awesome-icon icon="times"/></button>
                 </div>
                 <hr>
