@@ -24,7 +24,7 @@ name: "Navegacion",
     /*width: 97vw;*/
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 ul {

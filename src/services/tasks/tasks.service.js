@@ -49,13 +49,13 @@ export class TaskService {
         let yesterday = moment().subtract(1, 'days').toDate();
         let completadasAyer = [];
         completadas.forEach((completada) =>{
-            console.log(new Date(completada.completed_at).toDateString())
-            console.log(new Date(yesterday).toDateString())
+            // console.log(new Date(completada.completed_at).toDateString())
+            // console.log(new Date(yesterday).toDateString())
             if(new Date(completada.completed_at).toDateString() === new Date(yesterday).toDateString()){
                 completadasAyer = [...completadasAyer, completada];
             }
         })
-        console.log(completadasAyer)
+        // console.log(completadasAyer)
         return completadasAyer;
     }
 

@@ -85,6 +85,7 @@ div {
     /*padding-bottom: 20px;*/
     padding-bottom: 1em;
     max-width: 100vw;
+    overflow-x: hidden;
 }
 
 input {

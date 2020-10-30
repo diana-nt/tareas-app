@@ -1,7 +1,7 @@
 <template>
         <ul>
             <li v-for="tarea in tareas" :key="tarea.id">
-                <div id="individualTask">
+                <div class="individualTask">
                     <label class="container">
                         <input type="checkbox" v-model="tarea.completed" @input="$emit('completeTask', tarea.id)">
                         <span :class="{ 'completed': tarea.completed }">{{ tarea.title }}</span>
@@ -50,48 +50,75 @@ name: "Tareas.vue",
 
 <style scoped>
 
-#individualTask {
-    display: grid;
-    /*grid-template-columns: repeat(3, 1fr);*/
-    grid-template-columns: 70% 20% 7%;
-    grid-gap: 10px;
-    /*grid-auto-rows: minmax(10px, auto);*/
+
+
+@media (max-width: 1500px) and (min-width: 450px){
+    .individualTask {
+        display: grid;
+        /*grid-template-columns: repeat(3, 1fr);*/
+        grid-template-columns: auto minmax(160px, 200px) 20px;
+        grid-gap: 10px;
+        /*grid-auto-rows: minmax(10px, auto);*/
+    }
+
+    .daysFromCompleted{
+        grid-column: 2;
+        overflow-wrap: break-word;
+    }
+
+    button{
+        grid-column: 3;
+    }
+
+    .container{
+        grid-column: 1;
+        max-width: 90%;
+        /*overflow-wrap: break-word;*/
+        word-break: break-word;
+    }
+
+    ul{
+        margin: 0;
+        padding-left: 2em;
+        min-width: 100%;
+    }
 }
 
-.daysFromCompleted{
-    grid-column: 2;
-    overflow-wrap: break-word;
-}
+@media (max-width: 450px) and (min-width: 60px){
+    .individualTask{
+        display: grid;
+        /*grid-template-rows: repeat(2, 1fr);*/
+        grid-template-rows: auto;
+        grid-gap: 10px;
+        justify-content: space-between;
+    }
+    .daysFromCompleted{
+        grid-row: 2;
+        padding-left: 33px;
+        overflow-wrap: break-word;
+    }
 
-/*div {
-    display: flex;
-    width: fit-content;
-    !*transform: translateX(5em);*!
-}*/
+    button{
+        grid-row: 1;
+    }
 
-ul{
-    /*margin-left: 40px;*/
-    /*margin-left: 3rem;*/
-    /*width: 400px;*/
-    /*width: 50rem;*/
-    /*max-width: 95vw;*/
-    /*margin-right: 1rem;*/
-    margin: 0;
-    /*padding: 0;*/
-    /*padding: 1em 1em 1em 2em;*/
-    padding-left: 2em;
-    /*padding-right: 1em;*/
-    min-width: 100%;
+    .container{
+        grid-row: 1;
+        min-width: 200px;
+        max-width: 300px;
+        overflow-wrap: break-word;
+    }
+
+    ul{
+        margin: 0;
+        padding-left: 0;
+        min-width: 100%;
+    }
 }
 
 li {
     list-style: none;
-    /*display: flex;
-    flex-direction: column;*/
-    /*justify-content: space-between;*/
-    /*margin-bottom: 20px;*/
     margin-bottom: 1rem;
-    /*border-bottom: solid 1px #000;*/
 }
 
 .completed {
@@ -113,19 +140,13 @@ button{
     cursor: pointer;
     float: right;
     padding: 0;
-    grid-column: 3;
-    justify-self: right;
+    /*grid-column: 3;*/
+    /*justify-self: right;*/
     justify-content: center;
 }
 
-/*.iconPosition {
-    position: relative;
-    right: 2.5px;
-}*/
-
-
 .container {
-    grid-column: 1;
+    /*grid-column: 1;*/
     display: inline-block;
     position: relative;
     padding-left: 2em;
@@ -138,8 +159,8 @@ button{
     user-select: none;
     /*max-width: 45rem;
     overflow: auto;*/
-    max-width: 90%;
-    overflow-wrap: break-word;
+    /*max-width: 90%;
+    overflow-wrap: break-word;*/
 }
 
 .container input {
