@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c52bd6b-bb27-4626-8689-7bbb6084d235" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/tests/addTask.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CustomSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CustomSelect.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LocaleSwitcher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LocaleSwitcher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navegacion.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navegacion.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/task/task.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/task/task.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -43,17 +42,38 @@
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/services" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/services" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Task entity" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/entities/task/task.spec.js" />
+      <test-names>
+        <test-name value="Task entity" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Task entity" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -78,7 +98,7 @@
       <workItem from="1603868405500" duration="14582000" />
       <workItem from="1603954708908" duration="13944000" />
       <workItem from="1604041111042" duration="24469000" />
-      <workItem from="1604386700722" duration="9690000" />
+      <workItem from="1604386700722" duration="14354000" />
     </task>
     <task id="LOCAL-00001" summary="Save app init">
       <created>1602238477211</created>
@@ -332,14 +352,20 @@
       <option name="project" value="LOCAL" />
       <updated>1604389915308</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Save attempts to solve selected issue">
+      <created>1604396430537</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1604396430537</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add persisted state" />
     <MESSAGE value="Add date for state changes" />
     <MESSAGE value="Add home view" />
     <MESSAGE value="Change favicon" />
@@ -364,13 +390,14 @@
     <MESSAGE value="Move checkmark position" />
     <MESSAGE value="Adjust padding" />
     <MESSAGE value="Erase unnecessary css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Erase unnecessary css" />
+    <MESSAGE value="Save attempts to solve selected issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save attempts to solve selected issue" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3686" y="611" width="298" height="224" key="#ESLint" timestamp="1603786138914">
+    <state x="3686" y="611" width="312" height="238" key="#ESLint" timestamp="1604398645348">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3686" y="611" width="298" height="224" key="#ESLint/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603786138914" />
+    <state x="3686" y="611" width="312" height="238" key="#ESLint/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604398645348" />
     <state x="2829" y="401" width="732" height="644" key="#Inspections" timestamp="1602832217751">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -379,10 +406,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="3528" y="545" width="604" height="357" key="#Notifications/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602238706082" />
-    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2" timestamp="1604389915256">
+    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2" timestamp="1604396430478">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604389915256" />
+    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604396430478" />
     <state x="2992" y="290" width="1478" height="879" key="DiffContextDialog" timestamp="1603453519880">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -391,22 +418,22 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="3618" y="478" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603956880823" />
-    <state width="1224" height="495" key="GridCell.Tab.0.bottom" timestamp="1602655996514">
+    <state width="2514" height="403" key="GridCell.Tab.0.bottom" timestamp="1604399008122">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="1224" height="495" key="GridCell.Tab.0.bottom/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602655996514" />
-    <state width="1224" height="495" key="GridCell.Tab.0.center" timestamp="1602655996513">
+    <state width="2514" height="403" key="GridCell.Tab.0.bottom/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604399008122" />
+    <state width="2514" height="403" key="GridCell.Tab.0.center" timestamp="1604399008121">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="1224" height="495" key="GridCell.Tab.0.center/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602655996513" />
-    <state width="1224" height="495" key="GridCell.Tab.0.left" timestamp="1602655996513">
+    <state width="2514" height="403" key="GridCell.Tab.0.center/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604399008121" />
+    <state width="2514" height="403" key="GridCell.Tab.0.left" timestamp="1604399008121">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="1224" height="495" key="GridCell.Tab.0.left/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602655996513" />
-    <state width="1224" height="495" key="GridCell.Tab.0.right" timestamp="1602655996514">
+    <state width="2514" height="403" key="GridCell.Tab.0.left/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604399008121" />
+    <state width="2514" height="403" key="GridCell.Tab.0.right" timestamp="1604399008122">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="1224" height="495" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602655996514" />
+    <state width="2514" height="403" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604399008122" />
     <state width="1224" height="495" key="GridCell.Tab.1.bottom" timestamp="1602655996514">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
