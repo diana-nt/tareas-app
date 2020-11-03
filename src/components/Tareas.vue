@@ -63,7 +63,7 @@ name: "Tareas.vue",
 
 
 
-@media (max-width: 1500px) and (min-width: 450px){
+@media (max-width: 3000px) and (min-width: 450px){
     .individualTask {
         display: grid;
         /*grid-template-columns: repeat(3, 1fr);*/

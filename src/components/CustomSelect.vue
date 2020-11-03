@@ -3,15 +3,12 @@
         <div class="selected" :class="{ open: open }" @click="open = !open">
             {{ selected }}
         </div>
+<!--       MIRAR: nextTick -->
         <div class="items" :class="{ selectHide: !open }">
             <div
                 v-for="(option, i) of options"
                 :key="i"
-                @click="
-            selected = option;
-            open = false;
-            $emit('input', option);
-                "
+                @click="optionSelected(option)"
             >
                 {{ option }}
             </div>
@@ -53,6 +50,11 @@ export default {
     },
     methods: {
         onClick(option){
+            this.selected = option;
+            this.open = false;
+            this.$emit('input', option);
+        },
+        optionSelected(option){
             this.selected = option;
             this.open = false;
             this.$emit('input', option);

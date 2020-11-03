@@ -4,8 +4,8 @@
         <agregar-tarea />
         <div class="taskList">
             <custom-select
-                :options="[ $t('option1') , $t('option2'), $t('option3')]"
-                :default="$t('option1')"
+                :options="options"
+                :default="options[0]"
                 @input="cambiarTab"/>
             <tareas
                 @deleteTask = 'deleteTask'
@@ -29,6 +29,11 @@ import {TaskService} from "../services/tasks";
 
 export default {
     name: 'Home.vue',
+    data(){
+      return {
+          options: [ this.$t('option1') , this.$t('option2'), this.$t('option3')],
+        }
+    },
     components: {
         Tareas,
         AgregarTarea,
@@ -97,6 +102,12 @@ h2 {
     flex-direction: column;
     justify-content: flex-start;
     padding: 1em 0em;
+}
+
+@media (max-width: 3000px) and (min-width: 450px){
+    .taskList{
+        padding: 10px 50px;
+    }
 }
 
 /*footer {
