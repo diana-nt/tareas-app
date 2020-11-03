@@ -11,8 +11,6 @@
 <script>
 export default {
 name: "Navegacion",
-    methods: {
-    }
 }
 </script>
 

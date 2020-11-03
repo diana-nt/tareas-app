@@ -1,6 +1,6 @@
 <template>
     <div class="custom-select" :tabindex="tabindex" @blur="open = false">
-        <div class="selected" :class="{ open: open }" @click="open = !open">
+        <div class="selected" :class="{ open: open }" @click="open = !open" >
             {{ selected }}
         </div>
 <!--       MIRAR: nextTick -->
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { i18n } from "../plugins/i18n";
+// import { i18n } from "../plugins/i18n";
 
 export default {
     name: "CustomSelect.vue",
@@ -49,7 +49,7 @@ export default {
     },
     mounted() {
         this.$emit("input", this.selected);
-        this.$nextTick(() => {
+        /*this.$nextTick(() => {
             if(i18n.locale === 'es'){
                 switch(this.selected){
                     case 'Tasks':
@@ -87,7 +87,7 @@ export default {
                         break;
                 }
             }
-        })
+        })*/
     },
     methods: {
         /*onClick(option){
@@ -99,9 +99,10 @@ export default {
             this.selected = option;
             this.open = false;
             this.$emit('input', option);
+            // this.$forceUpdate();
         },
         /*changeSelected(){
-            if(this.i18n.locale === 'es'){
+            if(i18n.locale === 'es'){
                 switch(this.selected){
                     case 'Tasks':
                         this.selected = this.$t('option1');
@@ -119,7 +120,7 @@ export default {
                         console.log('No ha hecho falta cambiar el selected');
                         break;
                 }
-            }else if(this.i18n.locale === 'en'){
+            }else if(i18n.locale === 'en'){
                 switch (this.selected){
                     case 'Tareas':
                         this.selected = this.$t('option1');
@@ -137,6 +138,15 @@ export default {
                         console.log('No ha hecho falta cambiar el selected');
                         break;
                 }
+            }
+        }*/
+        /*changeSelected(){
+            if(this.selected === 'Tasks' || this.selected === 'Tareas'){
+                this.selected = this.$t('option1');
+            } else if(this.selected === 'Pending' || this.selected === 'Pendientes'){
+                this.selected = this.$t('option2');
+            } else if(this.selected === 'Finished' || this.selected === 'Finalizadas'){
+                this.selected = this.$t('option3');
             }
         }*/
     },

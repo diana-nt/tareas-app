@@ -25,6 +25,16 @@ const router = new Router({
             name: 'Home',
             component: Home
         },
+        /*{
+            path: '/home/pending',
+            name: 'Pending',
+            component: Home
+        },
+        {
+            path: '/home/finished',
+            name: 'Finished',
+            component: Home
+        },*/
         {
             path: '/ystdtasks',
             name: 'Ystdtasks',

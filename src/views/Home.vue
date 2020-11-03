@@ -3,9 +3,13 @@
         <h2>{{ $t('homePage').toUpperCase() }}</h2>
         <agregar-tarea />
         <div class="taskList">
-            <custom-select
+            <!--<custom-select
                 :options="options"
                 :default="options[0]"
+                @input="cambiarTab"/>-->
+            <custom-select
+                :options="[$t('option1'), $t('option2'), $t('option3')]"
+                :default="$t('option1')"
                 @input="cambiarTab"/>
             <tareas
                 @deleteTask = 'deleteTask'
@@ -27,7 +31,8 @@ export default {
     name: 'Home.vue',
     data(){
       return {
-          options: [ this.$t('option1') , this.$t('option2'), this.$t('option3')],
+          // options: [ this.$t('option1') , this.$t('option2'), this.$t('option3')],
+          // selectKey: 0
         }
     },
     components: {
@@ -38,6 +43,14 @@ export default {
     methods: {
         cambiarTab(tab){
             this.$store.dispatch('cambiarTab', tab);
+            /*if(tab === 'Pendientes' || tab === 'Pending'){
+                this.$router.push({ name: "Pending" })
+            }else if(tab === 'Finalizadas' || tab === 'Finished'){
+                this.$router.push({ name: "Finished" })
+            }else{
+                this.$router.push({name: "Home"})
+            }*/
+            // this.forceRerender();
         },
         ordenarTareas(){
             this.$store.dispatch('ordenarTareas')
@@ -54,6 +67,10 @@ export default {
             let finalTasks = this.$store.getters.getTareas;
             TaskService.saveTasksInStorage(finalTasks);
         },
+        /*forceRerender() {
+            this.componentKey += 0;
+            console.log('asdf')
+        }*/
     }
 }
 </script>
