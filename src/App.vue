@@ -24,15 +24,6 @@ export default {
         LocaleSwitcher,
         Navegacion
     },
-    /*data() {
-        return {
-            authenticated: false,
-            mockAccount: {
-                username: "diana",
-                password: "1234"
-            }
-        }
-    },*/
     mounted() {
         if(!this.authenticated) {
             this.$router.push({ name: "login" });
@@ -41,11 +32,7 @@ export default {
         }
     },
     methods: {
-        /*setAuthenticated(status) {
-            this.authenticated = status;
-        },*/
         logout() {
-            // this.authenticated = false;
             this.$store.dispatch('logout');
             UserService.deleteSessionInStorage();
         }

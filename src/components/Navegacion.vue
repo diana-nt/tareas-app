@@ -1,5 +1,4 @@
 <template>
-<!--    <div>-->
         <div id="nav">
             <ul>
                 <li> <router-link :to="{name: 'Home'}">{{ $t('homeNav') }}</router-link> </li>
@@ -7,7 +6,6 @@
                 <li style="float: right"> <router-link class="logout" to="/login" v-on:click.native="$emit('logout')">{{ $t('logoutNav') }}</router-link> </li>
             </ul>
         </div>
-<!--    </div>-->
 </template>
 
 <script>
@@ -21,7 +19,6 @@ name: "Navegacion",
 <style scoped>
 
 #nav {
-    /*width: 97vw;*/
     position: sticky;
     top: 0;
     z-index: 3;

@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import { i18n } from "../plugins/i18n";
+
 export default {
     name: "CustomSelect.vue",
     props: {
@@ -47,19 +49,97 @@ export default {
     },
     mounted() {
         this.$emit("input", this.selected);
+        this.$nextTick(() => {
+            if(i18n.locale === 'es'){
+                switch(this.selected){
+                    case 'Tasks':
+                        this.selected = this.$t('option1');
+                        break;
+
+                    case 'Pending':
+                        this.selected = this.$t('option2');
+                        break;
+
+                    case 'Finished':
+                        this.selected = this.$t('option3');
+                        break;
+
+                    default:
+                        console.log('No ha hecho falta cambiar el selected');
+                        break;
+                }
+            }else if(i18n.locale === 'en'){
+                switch (this.selected){
+                    case 'Tareas':
+                        this.selected = this.$t('option1');
+                        break;
+
+                    case 'Pendientes':
+                        this.selected = this.$t('option2');
+                        break;
+
+                    case 'Finalizadas':
+                        this.selected = this.$t('option3');
+                        break;
+
+                    default:
+                        console.log('No ha hecho falta cambiar el selected');
+                        break;
+                }
+            }
+        })
     },
     methods: {
-        onClick(option){
+        /*onClick(option){
             this.selected = option;
             this.open = false;
             this.$emit('input', option);
-        },
+        },*/
         optionSelected(option){
             this.selected = option;
             this.open = false;
             this.$emit('input', option);
-        }
-    }
+        },
+        /*changeSelected(){
+            if(this.i18n.locale === 'es'){
+                switch(this.selected){
+                    case 'Tasks':
+                        this.selected = this.$t('option1');
+                        break;
+
+                    case 'Pending':
+                        this.selected = this.$t('option2');
+                        break;
+
+                    case 'Finished':
+                        this.selected = this.$t('option3');
+                        break;
+
+                    default:
+                        console.log('No ha hecho falta cambiar el selected');
+                        break;
+                }
+            }else if(this.i18n.locale === 'en'){
+                switch (this.selected){
+                    case 'Tareas':
+                        this.selected = this.$t('option1');
+                        break;
+
+                    case 'Pendientes':
+                        this.selected = this.$t('option2');
+                        break;
+
+                    case 'Finalizadas':
+                        this.selected = this.$t('option3');
+                        break;
+
+                    default:
+                        console.log('No ha hecho falta cambiar el selected');
+                        break;
+                }
+            }
+        }*/
+    },
 }
 </script>
 
@@ -73,8 +153,6 @@ export default {
     outline: none;
     height: 47px;
     line-height: 47px;
-    /*margin-left: 50px;*/
-    /*transform: translateX(3.2em);*/
     z-index: 2;
 }
 

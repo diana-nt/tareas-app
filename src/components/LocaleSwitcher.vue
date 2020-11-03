@@ -33,12 +33,6 @@ name: "LocaleSwitcher",
 
 <style scoped>
 
-/*li {
-    text-decoration: underline;
-    color: #459CE7;
-    cursor: pointer;
-}*/
-
 img {
     cursor: pointer;
     /*margin: 1px;*/
@@ -48,7 +42,6 @@ img {
 
 img:hover {
     border: 2px solid paleturquoise;
-    /*background-color: darkgray;*/
 }
 
 </style>

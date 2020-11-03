@@ -24,18 +24,6 @@ export default {
         }
     },
     methods: {
-        /*login() {
-            if(this.input.username != "" && this.input.password != "") {
-                if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
-                    this.$emit("authenticated", true);
-                    this.$router.replace({ name: "Home" });
-                } else {
-                    console.log("Nombre de usuario y/o contraseña incorrecto/s");
-                }
-            } else {
-                console.log("Debes introducir un nombre de usuario y una contraseña");
-            }
-        }*/
         login() {
             if(this.input.username.length && this.input.password.length) {
 
@@ -51,14 +39,6 @@ export default {
                         this.$router.replace({ name: "Home" });
                     }
                 }
-
-
-                // if(this.input.username == this.account.username && this.input.password == this.account.password) {
-                //     this.$store.dispatch('login');
-                //     this.$router.replace({ name: "Home" });
-                // } else {
-                //     console.log("Nombre de usuario y/o contraseña incorrecto/s");
-                // }
             } else {
                 console.log("Debes introducir un nombre de usuario y una contraseña");
             }
@@ -66,7 +46,6 @@ export default {
     },
     computed: {
         ...mapGetters({authenticated:"getAuthenticated"}),
-        // ...mapGetters({account:"getMockAccount"})
     },
     directives: {
         focus: {
@@ -85,7 +64,6 @@ export default {
     border: 2px solid black;
     background-color: #e8fcff;
     margin: auto;
-    /*margin-top: 200px;*/
     margin-bottom: 12em;
     margin-top: 12em;
     padding: 20px;
@@ -104,7 +82,6 @@ export default {
 input {
     background: white;
     border: solid 2px;
-    /*padding: 7px 10px;*/
     padding: .3em .4em;
     width: 16em;
     max-width: 100%;

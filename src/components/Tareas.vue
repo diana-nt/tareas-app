@@ -55,6 +55,47 @@ name: "Tareas.vue",
             }
         }
     },
+/*    mounted() {
+        this.$nextTick(() => {
+            if(this.i18n.locale === 'es'){
+                switch(this.selected){
+                    case 'Tasks':
+                        this.selected = this.$t('option1');
+                        break;
+
+                    case 'Pending':
+                        this.selected = this.$t('option2');
+                        break;
+
+                    case 'Finished':
+                        this.selected = this.$t('option3');
+                        break;
+
+                    default:
+                        console.log('No ha hecho falta cambiar el selected');
+                        break;
+                }
+            }else if(this.i18n.locale === 'en'){
+                switch (this.selected){
+                    case 'Tareas':
+                        this.selected = this.$t('option1');
+                        break;
+
+                    case 'Pendientes':
+                        this.selected = this.$t('option2');
+                        break;
+
+                    case 'Finalizadas':
+                        this.selected = this.$t('option3');
+                        break;
+
+                    default:
+                        console.log('No ha hecho falta cambiar el selected');
+                        break;
+                }
+            }
+        })
+    }*/
 
 }
 </script>
@@ -66,10 +107,8 @@ name: "Tareas.vue",
 @media (max-width: 3000px) and (min-width: 450px){
     .individualTask {
         display: grid;
-        /*grid-template-columns: repeat(3, 1fr);*/
         grid-template-columns: auto minmax(160px, 200px) 20px;
         grid-gap: 10px;
-        /*grid-auto-rows: minmax(10px, auto);*/
     }
 
     .daysFromCompleted{
@@ -98,7 +137,6 @@ name: "Tareas.vue",
 @media (max-width: 450px) and (min-width: 60px){
     .individualTask{
         display: grid;
-        /*grid-template-rows: repeat(2, 1fr);*/
         grid-template-rows: auto;
         grid-gap: 10px;
         justify-content: space-between;
@@ -143,7 +181,6 @@ li {
 }
 
 button{
-    /*margin-left: 20px;*/
     border-radius: 0;
     height: 20px;
     width: 20px;
@@ -151,27 +188,19 @@ button{
     cursor: pointer;
     float: right;
     padding: 0;
-    /*grid-column: 3;*/
-    /*justify-self: right;*/
     justify-content: center;
 }
 
 .container {
-    /*grid-column: 1;*/
     display: inline-block;
     position: relative;
     padding-left: 2em;
-    /*margin-bottom: 12px;*/
     cursor: pointer;
     font-size: 18px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    /*max-width: 45rem;
-    overflow: auto;*/
-    /*max-width: 90%;
-    overflow-wrap: break-word;*/
 }
 
 .container input {

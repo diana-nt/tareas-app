@@ -13,10 +13,6 @@
             />
         </div>
         <button class="ordenar" @click="ordenarTareas">{{ $t('sortButton') }}</button>
-        <!--<footer>
-            <p>Hecho por: Diana</p>
-            <p>Año: 2020</p>
-        </footer>-->
     </div>
 </template>
 
@@ -49,18 +45,14 @@ export default {
         deleteTask(id) {
             this.$store.dispatch("eliminarTarea", id);
             this.$store.dispatch('actualizarFecha');
-            // this.$store.dispatch("cambiarId");
             let finalTasks = this.$store.getters.getTareas;
-            // console.log(finalTasks)
             TaskService.saveTasksInStorage(finalTasks);
         },
         completeTask(id) {
             this.$store.dispatch("completarTarea", id);
             this.$store.dispatch('actualizarFecha');
             let finalTasks = this.$store.getters.getTareas;
-            // console.log(finalTasks)
             TaskService.saveTasksInStorage(finalTasks);
-            // console.log(TaskService.getCompletedTasks())
         },
     }
 }
@@ -72,7 +64,6 @@ h2 {
 
     font-family: 'Oswald', sans-serif;
     align-self: center;
-    /*font-size: 60px;*/
     font-size: 3.8rem;
     text-decoration: underline;
     text-decoration-color: paleturquoise;
@@ -81,13 +72,10 @@ h2 {
 
 .ordenar {
     border-radius: 0;
-    /*height: 25px;*/
-    /*width: 70px;*/
     width: fit-content;
     background-color: #afeeee;
     cursor: pointer;
     font-weight: bold;
-    /*margin-top: 30px;*/
     padding: .4em 1em;
 }
 
@@ -109,16 +97,6 @@ h2 {
         padding: 10px 50px;
     }
 }
-
-/*footer {
-    position: sticky;
-    bottom: 0;
-    margin-top: 3em;
-    text-align: center;
-    padding: 0.5em;
-    background-color: #333333;
-    color: #ffffff;
-}*/
 
 button:hover{
     background-color: darkgray;
