@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c52bd6b-bb27-4626-8689-7bbb6084d235" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/tests/addTask.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/user/user.service.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/task/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/task/task.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/task/task.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/task/task.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/tasks/tasks.spec.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/tasks/tasks.spec.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/addTask.spec.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +56,20 @@
       <recent name="$PROJECT_DIR$/src/services" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Jest.Task entity.Method getDaysFromCompleted.returns two">
+    <configuration name="Task Service" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/services/tasks/tasks.spec.service.js" />
+      <test-names>
+        <test-name value="Task Service" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Task entity" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -69,8 +83,25 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="Task entity.Method getDaysFromCompleted.returns two" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/entities/task/task.spec.js" />
+      <test-names>
+        <test-name value="Task entity" />
+        <test-name value="Method getDaysFromCompleted" />
+        <test-name value="returns two" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Task entity.Method getDaysFromCompleted.returns two" />
+        <item itemvalue="Jest.Task Service" />
         <item itemvalue="Jest.Task entity" />
       </list>
     </recent_temporary>
@@ -98,7 +129,8 @@
       <workItem from="1603868405500" duration="14582000" />
       <workItem from="1603954708908" duration="13944000" />
       <workItem from="1604041111042" duration="24469000" />
-      <workItem from="1604386700722" duration="14354000" />
+      <workItem from="1604386700722" duration="14365000" />
+      <workItem from="1604473154978" duration="7086000" />
     </task>
     <task id="LOCAL-00001" summary="Save app init">
       <created>1602238477211</created>
@@ -359,14 +391,20 @@
       <option name="project" value="LOCAL" />
       <updated>1604396430537</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Start testing">
+      <created>1604401247230</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1604401247230</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add date for state changes" />
     <MESSAGE value="Add home view" />
     <MESSAGE value="Change favicon" />
     <MESSAGE value="Add page for the tasks completed yesterday" />
@@ -391,7 +429,8 @@
     <MESSAGE value="Adjust padding" />
     <MESSAGE value="Erase unnecessary css" />
     <MESSAGE value="Save attempts to solve selected issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save attempts to solve selected issue" />
+    <MESSAGE value="Start testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start testing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3686" y="611" width="312" height="238" key="#ESLint" timestamp="1604398645348">
@@ -406,10 +445,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="3528" y="545" width="604" height="357" key="#Notifications/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602238706082" />
-    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2" timestamp="1604396430478">
+    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2" timestamp="1604401247158">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604396430478" />
+    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604401247158" />
     <state x="2992" y="290" width="1478" height="879" key="DiffContextDialog" timestamp="1603453519880">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -418,22 +457,22 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="3618" y="478" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603956880823" />
-    <state width="2514" height="403" key="GridCell.Tab.0.bottom" timestamp="1604399008122">
+    <state width="2514" height="402" key="GridCell.Tab.0.bottom" timestamp="1604475386243">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2514" height="403" key="GridCell.Tab.0.bottom/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604399008122" />
-    <state width="2514" height="403" key="GridCell.Tab.0.center" timestamp="1604399008121">
+    <state width="2514" height="402" key="GridCell.Tab.0.bottom/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604475386243" />
+    <state width="2514" height="402" key="GridCell.Tab.0.center" timestamp="1604475386243">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2514" height="403" key="GridCell.Tab.0.center/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604399008121" />
-    <state width="2514" height="403" key="GridCell.Tab.0.left" timestamp="1604399008121">
+    <state width="2514" height="402" key="GridCell.Tab.0.center/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604475386243" />
+    <state width="2514" height="402" key="GridCell.Tab.0.left" timestamp="1604475386242">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2514" height="403" key="GridCell.Tab.0.left/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604399008121" />
-    <state width="2514" height="403" key="GridCell.Tab.0.right" timestamp="1604399008122">
+    <state width="2514" height="402" key="GridCell.Tab.0.left/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604475386242" />
+    <state width="2514" height="402" key="GridCell.Tab.0.right" timestamp="1604475386243">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2514" height="403" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604399008122" />
+    <state width="2514" height="402" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604475386243" />
     <state width="1224" height="495" key="GridCell.Tab.1.bottom" timestamp="1602655996514">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -474,13 +513,25 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2981" y="635" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602836549955" />
-    <state x="3531" y="459" width="618" height="558" key="find.popup" timestamp="1604393882852">
+    <state x="3531" y="459" width="618" height="558" key="find.popup" timestamp="1604475030003">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3531" y="459" width="618" height="558" key="find.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604393882852" />
+    <state x="3531" y="459" width="618" height="558" key="find.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604475030003" />
     <state x="2863" y="329" width="672" height="678" key="search.everywhere.popup" timestamp="1604058659231">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2863" y="329" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604058659231" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Tareas.vue</url>
+          <line>49</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
