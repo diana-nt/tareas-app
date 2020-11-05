@@ -6,7 +6,8 @@
             :placeholder= "$t('addTaskPlaceholder')"
             @keyup.enter="agregarTarea"
             v-focus>
-        <button @click="agregarTarea"><font-awesome-icon icon="plus" /></button>
+        <button :disabled="!title.length" @click="agregarTarea"><font-awesome-icon icon="plus" /></button>
+        <span v-if="!title.length">Escribe algo...</span>
     </div>
 </template>
 
@@ -14,10 +15,7 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-// import {TaskService} from "../services/tasks";
 import { v4 as uuidv4 } from 'uuid';
-
-
 
 library.add(faPlus)
 
@@ -33,33 +31,15 @@ name: "AgreagarTarea.vue",
             title:'',
             completed: false,
             created_at: new Date(),
-            completed_at: ''
+            completed_at: '',
         }
     },
-    /*mounted() {
-        if (localStorage.getItem('tareas')) {
-            try {
-                this.tareas = JSON.parse(localStorage.getItem('tareas'));
-            }catch (e) {
-                localStorage.removeItem('tareas');
-            }
-        }
-    },*/
     methods:{
         agregarTarea(){
-            // this.newId = this.tareas.length ? this.tareas.length++ : 1;
-            /*if (localStorage.getItem('tareas')) {
-                this.newId = JSON.parse(localStorage.getItem('tareas')).length++;
-            } else {
-                this.newId = 0;
-            }*/
-            // this.newId = this.tareas.length++;
             this.newId = uuidv4();
             this.$store.dispatch('agregarTarea', this);
             this.$store.dispatch('actualizarFecha');
             this.completed_at = '';
-            // TaskService.saveTasksInStorage(this.tareas)
-            // console.log(this.tareas)
             this.title = '';
         },
 
@@ -79,6 +59,7 @@ name: "AgreagarTarea.vue",
 
 div {
     display: flex;
+    flex-flow: row wrap;
     width: 40em;
     /*display: inherit;*/
     align-self: center;
@@ -125,8 +106,16 @@ button {
     width: inherit;
 }
 
+button:disabled{
+    cursor: not-allowed;
+}
+
 button:hover{
     background-color: darkgray;
+}
+
+span{
+    color: tomato;
 }
 
 </style>

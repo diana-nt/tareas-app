@@ -1,5 +1,5 @@
 import {describe, it} from "@jest/globals";
-import {UserService} from './user.service';
+import {UserService} from './user.service.js';
 const expect = require('chai').expect;
 
 
