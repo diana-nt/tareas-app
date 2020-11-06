@@ -7,7 +7,7 @@
             @keyup.enter="agregarTarea(title)"
             v-focus>
         <button :disabled="!title.length" @click="agregarTarea(title)"><font-awesome-icon icon="plus" /></button>
-        <span id="error"></span>
+        <span class="error" v-if="error.length">{{error}}</span>
     </div>
 </template>
 
@@ -16,7 +16,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { v4 as uuidv4 } from 'uuid';
-import {i18n} from "@/plugins/i18n";
 
 library.add(faPlus)
 
@@ -33,20 +32,20 @@ name: "AgreagarTarea.vue",
             completed: false,
             created_at: new Date(),
             completed_at: '',
+            error: ''
         }
     },
     methods:{
         agregarTarea(title){
-            let error = document.getElementById('error');
+            this.error = '';
             if(title.length === 0 || !title.trim()){
-                error.textContent = i18n.t('addTaskErrorMessage');
+                this.error = this.$t('addTaskErrorMessage');
             }else{
                 this.newId = uuidv4();
                 this.$store.dispatch('agregarTarea', this);
                 this.$store.dispatch('actualizarFecha');
                 this.completed_at = '';
                 this.title = '';
-                error.textContent = '';
             }
 
         },
@@ -127,8 +126,13 @@ button:hover{
     background-color: darkgray;
 }
 
-#error{
-    color: tomato;
+.error{
+    color: red;
+    border: 1px solid red;
+    background-color: #ffe6e6;
+    margin-top: 5px;
+    padding: 2px;
+    border-radius: 2px;
 }
 
 </style>
