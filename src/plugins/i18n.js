@@ -39,7 +39,7 @@ export const i18n = new VueI18n({
             loginTitle: 'Inicia sesión',
             usernamePlaceholder: 'Nombre de usuario',
             passwordPlaceholder: 'Contraseña',
-            loginButton: '¡Vamos allá!',
+            loginButton: '¡Vamos!',
 
             //Tasks completed x days ago
             completed: 'Completada hoy | Completada hace un día | Completada hace {numdays} días'

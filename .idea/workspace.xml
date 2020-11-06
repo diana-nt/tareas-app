@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c52bd6b-bb27-4626-8689-7bbb6084d235" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/CustomSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CustomSelect.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plugins/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/i18n.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/addTask.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/addTask.spec.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +158,7 @@
       <workItem from="1604386700722" duration="14365000" />
       <workItem from="1604473154978" duration="9949000" />
       <workItem from="1604559553851" duration="14483000" />
-      <workItem from="1604646037816" duration="9880000" />
+      <workItem from="1604646037816" duration="10835000" />
     </task>
     <task id="LOCAL-00001" summary="Save app init">
       <created>1602238477211</created>
@@ -463,14 +461,20 @@
       <option name="project" value="LOCAL" />
       <updated>1604651830867</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Add solved custom select translation">
+      <created>1604658207143</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1604658207143</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Style sorting button" />
     <MESSAGE value="Add login page" />
     <MESSAGE value="Style login page" />
     <MESSAGE value="Move login logic to store" />
@@ -495,7 +499,8 @@
     <MESSAGE value="Add faulty AgregarTarea test and disable button if input is empty" />
     <MESSAGE value="Add message under input for adding tasks" />
     <MESSAGE value="Add more complete addTask testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add more complete addTask testing" />
+    <MESSAGE value="Add solved custom select translation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add solved custom select translation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3686" y="611" width="312" height="238" key="#ESLint" timestamp="1604398645348">
@@ -514,10 +519,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2869" y="522" width="652" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604571987056" />
-    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2" timestamp="1604651830795">
+    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2" timestamp="1604658207081">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604651830795" />
+    <state x="3379" y="266" width="912" height="921" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604658207081" />
     <state x="2992" y="290" width="1478" height="879" key="DiffContextDialog" timestamp="1603453519880">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -590,18 +595,18 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="2514" height="495" key="GridCell.Tab.3.right/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604646535022" />
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604651834668">
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604658211833">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604651834668" />
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604658211833" />
     <state x="2981" y="635" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602836549955">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2981" y="635" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602836549955" />
-    <state x="3531" y="459" width="618" height="558" key="find.popup" timestamp="1604565566996">
+    <state x="3531" y="459" width="618" height="558" key="find.popup" timestamp="1604658299772">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3531" y="459" width="618" height="558" key="find.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604565566996" />
+    <state x="3531" y="459" width="618" height="558" key="find.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604658299772" />
     <state x="2863" y="329" width="672" height="678" key="search.everywhere.popup" timestamp="1604058659231">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
