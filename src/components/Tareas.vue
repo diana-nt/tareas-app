@@ -1,6 +1,6 @@
 <template>
         <ul>
-            <li v-for="tarea in tareas" :key="tarea.id">
+            <li v-for="tarea in tareasAMostrar" :key="tarea.id">
                 <div class="individualTask">
                     <label class="container">
                         <input type="checkbox" v-model="tarea.completed" @input="$emit('completeTask', tarea.id)">
@@ -35,7 +35,7 @@ name: "Tareas.vue",
     },
 
     computed: {
-        ...mapGetters({tareas:"getTareasAMostrar"})
+        ...mapGetters({tareasAMostrar:"getTareasAMostrar"})
     },
 
     created() {

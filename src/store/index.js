@@ -89,7 +89,16 @@ export default new Vuex.Store({
       state.actual = tab.toLowerCase();
     },
     ORDENAR_TAREAS(state){
-      state.tareas = state.tareas.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+      // state.tareas = state.tareas.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+      function compare(a, b){
+        if(a.title < b.title){
+          return -1;
+        }else if (a.name > b.name){
+          return 1;
+        }
+        return 0;
+      }
+      state.tareas = state.tareas.sort(compare);
     },
     ACTUALIZAR_FECHA(state) {
       state.fechaActualizacionEstado = new Date().getDate() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getFullYear();

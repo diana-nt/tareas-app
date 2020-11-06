@@ -29,7 +29,7 @@ export const i18n = new VueI18n({
             option3: 'Finalizadas',
 
             //Sort button
-            sortButton: 'Ordenar',
+            sortButton: 'Ordenar a-z',
 
             //Footer
             footerName: 'Hecho por: Diana',
@@ -66,7 +66,7 @@ export const i18n = new VueI18n({
             option3: 'Finished',
 
             //Sort button
-            sortButton: 'Sort',
+            sortButton: 'Sort a-z',
 
             //Footer
             footerName: 'Made by: Diana',
