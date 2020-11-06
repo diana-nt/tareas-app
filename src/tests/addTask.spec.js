@@ -38,16 +38,6 @@ describe('Add task component', () => {
             // const addTaskButton = wrapper.find('button');
             expect(addTaskButton.element.disabled).to.be.false;
         });
-        /*describe('and then clears the input', () => {
-            it('should disable the "+" button', () => {
-                // const addTaskButton = wrapper.find('button');
-
-                inputField.element.value = '';
-                inputField.trigger('input');
-
-                expect(addTaskButton.element.disabled).to.be.true;
-            });
-        });*/
     });
 
     describe('and then submits the task', () => {

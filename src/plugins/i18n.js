@@ -11,7 +11,7 @@ export const i18n = new VueI18n({
             //Home page
             homePage: 'tareas que hacer',
 
-            //Yesterda's completed tasks page
+            //Yesterday's completed tasks page
             yesterdayTasks: 'completadas ayer',
 
             //Add task input
@@ -48,7 +48,7 @@ export const i18n = new VueI18n({
             //Home page
             homePage: 'tasks to do',
 
-            //Yesterda's completed tasks page
+            //Yesterday's completed tasks page
             yesterdayTasks: 'completed yesterday',
 
             //Add task input

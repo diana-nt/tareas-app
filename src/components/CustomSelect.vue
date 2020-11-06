@@ -1,14 +1,13 @@
 <template>
     <div class="custom-select" :tabindex="tabindex" @blur="open = false">
         <div class="selected" :class="{ open: open }" @click="open = !open" >
-            {{ selected }}
+            {{ selectedToShow }}
         </div>
-<!--       MIRAR: nextTick -->
         <div class="items" :class="{ selectHide: !open }">
             <div
                 v-for="(option, i) of options"
                 :key="i"
-                @click="optionSelected(option)"
+                @click="optionSelected(option, i)"
             >
                 {{ option }}
             </div>
@@ -17,7 +16,7 @@
 </template>
 
 <script>
-// import { i18n } from "../plugins/i18n";
+import {i18n} from "@/plugins/i18n";
 
 export default {
     name: "CustomSelect.vue",
@@ -39,116 +38,26 @@ export default {
     },
     data() {
         return {
-            selected: this.default
-                ? this.default
-                : this.options.length > 0
-                    ? this.options[0]
-                    : null,
+            selected: this.default,
+            selectedId: 1,
             open: false,
         };
     },
+    computed: {
+        selectedToShow() {
+            return i18n.t(`option${this.selectedId}`);
+        }
+    },
     mounted() {
         this.$emit("input", this.selected);
-        /*this.$nextTick(() => {
-            if(i18n.locale === 'es'){
-                switch(this.selected){
-                    case 'Tasks':
-                        this.selected = this.$t('option1');
-                        break;
-
-                    case 'Pending':
-                        this.selected = this.$t('option2');
-                        break;
-
-                    case 'Finished':
-                        this.selected = this.$t('option3');
-                        break;
-
-                    default:
-                        console.log('No ha hecho falta cambiar el selected');
-                        break;
-                }
-            }else if(i18n.locale === 'en'){
-                switch (this.selected){
-                    case 'Tareas':
-                        this.selected = this.$t('option1');
-                        break;
-
-                    case 'Pendientes':
-                        this.selected = this.$t('option2');
-                        break;
-
-                    case 'Finalizadas':
-                        this.selected = this.$t('option3');
-                        break;
-
-                    default:
-                        console.log('No ha hecho falta cambiar el selected');
-                        break;
-                }
-            }
-        })*/
     },
     methods: {
-        /*onClick(option){
+        optionSelected(option, i){
             this.selected = option;
+            this.selectedId = i + 1;
             this.open = false;
             this.$emit('input', option);
-        },*/
-        optionSelected(option){
-            this.selected = option;
-            this.open = false;
-            this.$emit('input', option);
-            // this.$forceUpdate();
         },
-        /*changeSelected(){
-            if(i18n.locale === 'es'){
-                switch(this.selected){
-                    case 'Tasks':
-                        this.selected = this.$t('option1');
-                        break;
-
-                    case 'Pending':
-                        this.selected = this.$t('option2');
-                        break;
-
-                    case 'Finished':
-                        this.selected = this.$t('option3');
-                        break;
-
-                    default:
-                        console.log('No ha hecho falta cambiar el selected');
-                        break;
-                }
-            }else if(i18n.locale === 'en'){
-                switch (this.selected){
-                    case 'Tareas':
-                        this.selected = this.$t('option1');
-                        break;
-
-                    case 'Pendientes':
-                        this.selected = this.$t('option2');
-                        break;
-
-                    case 'Finalizadas':
-                        this.selected = this.$t('option3');
-                        break;
-
-                    default:
-                        console.log('No ha hecho falta cambiar el selected');
-                        break;
-                }
-            }
-        }*/
-        /*changeSelected(){
-            if(this.selected === 'Tasks' || this.selected === 'Tareas'){
-                this.selected = this.$t('option1');
-            } else if(this.selected === 'Pending' || this.selected === 'Pendientes'){
-                this.selected = this.$t('option2');
-            } else if(this.selected === 'Finished' || this.selected === 'Finalizadas'){
-                this.selected = this.$t('option3');
-            }
-        }*/
     },
 }
 </script>
