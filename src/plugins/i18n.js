@@ -16,6 +16,7 @@ export const i18n = new VueI18n({
 
             //Add task input
             addTaskPlaceholder: '¿Qué tienes que hacer?',
+            addTaskMessage: 'Escribe algo...',
 
             //Nav bar
             homeNav: 'Inicio',
@@ -52,6 +53,7 @@ export const i18n = new VueI18n({
 
             //Add task input
             addTaskPlaceholder: 'What do you have to do?',
+            addTaskMessage: 'Write something...',
 
             //Nav bar
             homeNav: 'Home',

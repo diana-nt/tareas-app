@@ -2,7 +2,6 @@ import {describe, it} from "@jest/globals";
 import {UserService} from './user.service.js';
 const expect = require('chai').expect;
 
-
 describe('User Service', () => {
     describe('Login method', () => {
         it('return true if account equals mockAccount', () => {

@@ -7,11 +7,11 @@
             @keyup.enter="agregarTarea"
             v-focus>
         <button :disabled="!title.length" @click="agregarTarea"><font-awesome-icon icon="plus" /></button>
-        <span v-if="!title.length">Escribe algo...</span>
+        <span  v-if="!title.length">{{ $t('addTaskMessage')}}</span>
     </div>
 </template>
 
-<script>
+<script type="module">
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -67,6 +67,12 @@ div {
     padding-bottom: 1em;
     max-width: 100vw;
     overflow-x: hidden;
+}
+
+@media(max-width: 350px){
+    div {
+        flex-flow: nowrap;
+    }
 }
 
 input {

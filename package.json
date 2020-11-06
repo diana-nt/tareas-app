@@ -1,7 +1,6 @@
 {
   "name": "tareas-app",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -14,6 +13,8 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/vue-fontawesome": "^2.0.0",
+    "@jest/globals": "^26.6.2",
+    "babel-jest": "^26.0.1",
     "chai": "^4.2.0",
     "core-js": "^3.6.5",
     "moment": "^2.29.1",
@@ -27,12 +28,15 @@
   },
   "devDependencies": {
     "@intlify/vue-i18n-loader": "^2.0.0-beta.1",
+    "@types/jest": "^26.0.3",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.4.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/test-utils": "^1.1.1",
     "babel-cli": "^6.26.0",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^6.7.2",
@@ -63,26 +67,5 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ],
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "vue"
-    ],
-    "transform": {
-      "^.+\\.vue$": "vue-jest",
-      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
-      "^.+\\.(js|jsx)?$": "babel-jest"
-    },
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1"
-    },
-    "snapshotSerializers": [
-      "jest-serializer-vue"
-    ],
-    "transformIgnorePatterns": [
-      "<rootDir>/node_modules/"
-    ]
-  }
+  ]
 }
