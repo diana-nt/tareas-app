@@ -39,7 +39,8 @@ module.exports = {
     testMatch: [
         // '**/tests/unit/**/*.test.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
         // '**/tests/unit/**/*.test.(js)|**/__tests__/*.(js)'
-        '**/src/tests/*.spec.(js)'
+        //'**/src/tests/*.spec.(js)|**/src/entities/task/*.spec.(js)|**/src/services/**/*.*.spec.(js)'
+        '**/?(*.)+(spec|test).[jt]s?(x)'
     ],
     snapshotSerializers: [
         'jest-serializer-vue'
