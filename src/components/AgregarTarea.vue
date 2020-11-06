@@ -6,8 +6,10 @@
             :placeholder= "$t('addTaskPlaceholder')"
             @keyup.enter="agregarTarea(title)"
             v-focus>
-        <button :disabled="!title.length" @click="agregarTarea(title)  "><font-awesome-icon icon="plus" /></button>
-        <span  v-if="!title.length">{{ $t('addTaskMessage')}}</span>
+        <button :disabled="!title.length" @click="agregarTarea(title)"><font-awesome-icon icon="plus" /></button>
+<!--        <span  v-if="!title.length">{{ $t('addTaskMessage')}}</span>-->
+<!--        <span>{{taskCannotBeAdded}}</span>-->
+        <span id="error"></span>
     </div>
 </template>
 
@@ -37,17 +39,23 @@ name: "AgreagarTarea.vue",
     },
     methods:{
         agregarTarea(title){
-            if(!title.length || title.startsWith(' ')){
-                alert(i18n.t('alert'))
+            let error = document.getElementById('error');
+            if(title.length === 0 || !title.trim()){
+                error.textContent = i18n.t('addTaskErrorMessage');
             }else{
                 this.newId = uuidv4();
                 this.$store.dispatch('agregarTarea', this);
                 this.$store.dispatch('actualizarFecha');
                 this.completed_at = '';
                 this.title = '';
+                error.textContent = '';
             }
-        },
 
+        },
+        /*errorMessage(title){
+            let error = document.getElementById('error');
+            if()
+        }*/
     },
     directives: {
         focus: {
