@@ -7,8 +7,6 @@
             @keyup.enter="agregarTarea(title)"
             v-focus>
         <button :disabled="!title.length" @click="agregarTarea(title)"><font-awesome-icon icon="plus" /></button>
-<!--        <span  v-if="!title.length">{{ $t('addTaskMessage')}}</span>-->
-<!--        <span>{{taskCannotBeAdded}}</span>-->
         <span id="error"></span>
     </div>
 </template>
@@ -52,10 +50,6 @@ name: "AgreagarTarea.vue",
             }
 
         },
-        /*errorMessage(title){
-            let error = document.getElementById('error');
-            if()
-        }*/
     },
     directives: {
         focus: {
@@ -133,7 +127,7 @@ button:hover{
     background-color: darkgray;
 }
 
-span{
+#error{
     color: tomato;
 }
 

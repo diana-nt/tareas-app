@@ -16,7 +16,6 @@ export const i18n = new VueI18n({
 
             //Add task input
             addTaskPlaceholder: '¿Qué tienes que hacer?',
-            addTaskMessage: 'Escribe algo...',
             addTaskErrorMessage: 'No puedes agregar tareas vacías',
 
             //Nav bar
@@ -54,7 +53,6 @@ export const i18n = new VueI18n({
 
             //Add task input
             addTaskPlaceholder: 'What do you have to do?',
-            addTaskMessage: 'Write something...',
             addTaskErrorMessage: 'You cannot add empty tasks',
 
             //Nav bar
