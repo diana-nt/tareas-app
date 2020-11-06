@@ -37,7 +37,7 @@ name: "AgreagarTarea.vue",
     },
     methods:{
         agregarTarea(title){
-            if(!title.length){
+            if(!title.length || title.startsWith(' ')){
                 alert(i18n.t('alert'))
             }else{
                 this.newId = uuidv4();
