@@ -4,9 +4,9 @@
             type="text"
             v-model="title" name="title"
             :placeholder= "$t('addTaskPlaceholder')"
-            @keyup.enter="agregarTarea"
+            @keyup.enter="agregarTarea(title)"
             v-focus>
-        <button :disabled="!title.length" @click="agregarTarea"><font-awesome-icon icon="plus" /></button>
+        <button :disabled="!title.length" @click="agregarTarea(title)  "><font-awesome-icon icon="plus" /></button>
         <span  v-if="!title.length">{{ $t('addTaskMessage')}}</span>
     </div>
 </template>
@@ -16,6 +16,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { v4 as uuidv4 } from 'uuid';
+import {i18n} from "@/plugins/i18n";
 
 library.add(faPlus)
 
@@ -35,12 +36,16 @@ name: "AgreagarTarea.vue",
         }
     },
     methods:{
-        agregarTarea(){
-            this.newId = uuidv4();
-            this.$store.dispatch('agregarTarea', this);
-            this.$store.dispatch('actualizarFecha');
-            this.completed_at = '';
-            this.title = '';
+        agregarTarea(title){
+            if(!title.length){
+                alert(i18n.t('alert'))
+            }else{
+                this.newId = uuidv4();
+                this.$store.dispatch('agregarTarea', this);
+                this.$store.dispatch('actualizarFecha');
+                this.completed_at = '';
+                this.title = '';
+            }
         },
 
     },
