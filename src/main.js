@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './store'
+import store from './store/index.js'
 import router from './router.js'
-import { i18n } from './plugins/i18n'
+import { i18n } from './plugins/i18n.js'
 
 
 Vue.config.productionTip = false
