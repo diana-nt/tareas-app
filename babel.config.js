@@ -1,15 +1,17 @@
 
-/*
 module.exports = {
-  "presets": [
-    ["@babel/preset-env", {
-      "targets": {
-        "node": "current"
-      }
-    }]
-  ]
-}*/
+  presets: [
+    [
+      "@babel/preset-env",
+      {
+        useBuiltIns: "usage",
+        corejs: 3,
+      },
+    ],
+  ],
+};
 
+/*
 module.exports = {
   // presets: [
   //   '@vue/app'
@@ -18,7 +20,12 @@ module.exports = {
     ['@babel/preset-env', {
       'targets': {
         'node': 'current'
-      }
-    }, '@vue/app']
+      },
+    }, '@vue/app'],
+    {
+      'useBuiltIns': 'usage',
+      'corejs': 3
+    }
+
   ]
-};
+};*/

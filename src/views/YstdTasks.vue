@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>{{ $t('yesterdayTasks').toUpperCase() }}</h2>
+        <h2 class="ystdtasks-title">{{ $t('yesterdayTasks').toUpperCase() }}</h2>
         <ul>
 <!--            <li v-for="completada in completadas" :key="completada.id">{{ completada.title }}</li>-->
             <li v-for="completada in completadasAyer" :key="completada.id">{{ completada.title }}

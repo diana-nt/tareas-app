@@ -1,7 +1,7 @@
 <template>
-    <div id="login">
+    <div class="login">
         <h2>{{ $t('loginTitle') }}</h2>
-        <div id="inputs">
+        <div class="inputs">
             <input type="text" name="username" v-model="input.username" :placeholder="$t('usernamePlaceholder')" v-focus/>
             <input type="password" name="password" v-model="input.password" :placeholder="$t('passwordPlaceholder')" @keyup.enter="login" />
         </div>
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style scoped>
-#login {
+.login {
     width: 30em;
     max-width: 100%;
     border: 2px solid black;
@@ -71,7 +71,7 @@ export default {
     flex-direction: column;
 }
 
-#inputs {
+.inputs {
     align-self: center;
     display: flex;
     flex-direction: column;

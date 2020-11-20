@@ -6,7 +6,7 @@
             :placeholder= "$t('addTaskPlaceholder')"
             @keyup.enter="agregarTarea(title)"
             v-focus>
-        <button :disabled="!title.length" @click="agregarTarea(title)"><font-awesome-icon icon="plus" /></button>
+        <button name="btn_addTask" :disabled="!title.length" @click="agregarTarea(title)"><font-awesome-icon icon="plus" /></button>
         <span class="error" v-if="error.length">{{error}}</span>
     </div>
 </template>

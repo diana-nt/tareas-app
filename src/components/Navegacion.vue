@@ -2,7 +2,7 @@
         <div id="nav">
             <ul>
                 <li> <router-link :to="{name: 'Home'}">{{ $t('homeNav') }}</router-link> </li>
-                <li> <router-link :to="{name: 'Ystdtasks'}">{{ $t('yesterdayTasksNav') }}</router-link> </li>
+                <li> <router-link :to="{name: 'Ystdtasks'}" class="ystdtasks-link">{{ $t('yesterdayTasksNav') }}</router-link> </li>
                 <li style="float: right"> <router-link class="logout" to="/login" v-on:click.native="$emit('logout')">{{ $t('logoutNav') }}</router-link> </li>
             </ul>
         </div>
