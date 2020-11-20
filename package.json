@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test": "yarn lint && yarn test:unit && yarn test:integration && yarn test:e2e",
-    "test:e2e": "nightwatch --config e2e/nightwatch.conf.js --env chrome",
+    "test:e2e": "nightwatch --config e2e/nightwatch.conf.js --env chrome,firefox",
     "start": "webpack serve"
   },
   "dependencies": {
