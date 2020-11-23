@@ -6,6 +6,7 @@
             <input type="password" name="password" v-model="input.password" :placeholder="$t('passwordPlaceholder')" @keyup.enter="login" />
         </div>
         <button type="button" @click="login()">{{ $t('loginButton') }}</button>
+        <span class="error" v-if="error.length">{{error}}</span>
     </div>
 </template>
 
@@ -18,29 +19,32 @@ export default {
     data() {
         return {
             input: {
-                username: "",
-                password: ""
-            }
+                username: '',
+                password: ''
+            },
+            error: ''
         }
     },
     methods: {
         login() {
-            if(this.input.username.length && this.input.password.length) {
-
+            this.error = '';
+            if (this.input.username.length && this.input.password.length) {
                 let resultLogin = UserService.login(this.input)
-                if (!resultLogin){
+                if (!resultLogin) {
                     console.log("Nombre de usuario y/o contraseña incorrecto/s");
-
-                }else{
+                    this.error = 'Nombre de usuario y/o contraseña incorrecto/s';
+                } else {
                     UserService.saveSessionInStorage();
                     let resultSaveInStorage = UserService.getSessionStorage();
-                    if (resultSaveInStorage){
+                    if (resultSaveInStorage) {
                         this.$store.dispatch('login');
-                        this.$router.replace({ name: "Home" });
+                        this.$router.replace({name: "Home"});
                     }
+                    this.error = '';
                 }
             } else {
                 console.log("Debes introducir un nombre de usuario y una contraseña");
+                this.error = 'Debes introducir un nombre de usuario y una contraseña';
             }
         }
     },
@@ -107,6 +111,16 @@ button {
 
 button:hover{
     background-color: darkgray;
+}
+
+.error{
+    color: red;
+    border: 1px solid red;
+    background-color: #ffe6e6;
+    margin-top: 20px;
+    padding: 2px;
+    border-radius: 2px;
+    text-align: center;
 }
 
 </style>

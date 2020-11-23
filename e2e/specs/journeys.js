@@ -39,7 +39,7 @@ module.exports = {
             .assert.urlContains('/ystdtasks')
     },
 
-    'step four: "Cerrar sesión" redirects to login page': function (browser) {
+    'step four: "Cerrar sesion" redirects to login page': function (browser) {
         browser
             .click('.logout')
             .assert.urlContains('/login')
