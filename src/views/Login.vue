@@ -26,10 +26,10 @@ export default {
         }
     },
     methods: {
-        login() {
+        async login() {
             this.error = '';
             if (this.input.username.length && this.input.password.length) {
-                let resultLogin = UserService.login(this.input)
+                let resultLogin = await UserService.login(this.input)
                 if (!resultLogin) {
                     console.log("Nombre de usuario y/o contraseña incorrecto/s");
                     this.error = 'Nombre de usuario y/o contraseña incorrecto/s';

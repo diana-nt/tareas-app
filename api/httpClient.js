@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const httpClient = axios.create({
-    baseURL: 'https://run.mocky.io/v3',
+    baseURL: 'http://demo8460299.mockable.io/',
     timeout: 1000,
     headers: {
         "Content-Type": "application/json",

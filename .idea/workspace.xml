@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c52bd6b-bb27-4626-8689-7bbb6084d235" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.development" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/httpClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/tasks.repository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/users.repository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env.variables.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/httpClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/httpClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/tasks.repository.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/tasks.repository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Tareas.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tareas.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/tasks/tasks.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/tasks/tasks.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/user/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user/user.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +52,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/services" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/services" />
     </key>
   </component>
   <component name="RunManager" selected="Jest.Add task component.the user populates the text input field.and then clears the input">
@@ -209,14 +208,7 @@
       <workItem from="1606383480693" duration="153000" />
       <workItem from="1606383644782" duration="152000" />
       <workItem from="1606383809554" duration="4482000" />
-      <workItem from="1606462269456" duration="3236000" />
-    </task>
-    <task id="LOCAL-00010" summary="Add persisted state">
-      <created>1602658342497</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1602658342498</updated>
+      <workItem from="1606462269456" duration="8280000" />
     </task>
     <task id="LOCAL-00011" summary="Add date for state changes">
       <created>1602663495797</created>
@@ -554,14 +546,20 @@
       <option name="project" value="LOCAL" />
       <updated>1606120481512</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Get tasks from api">
+      <created>1606465587801</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1606465587802</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Move flags to footer and change method in task.js" />
     <MESSAGE value="Move checkmark position" />
     <MESSAGE value="Adjust padding" />
     <MESSAGE value="Erase unnecessary css" />
@@ -586,7 +584,8 @@
     <MESSAGE value="Add firefox testing" />
     <MESSAGE value="Span error in login" />
     <MESSAGE value="Test error in login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test error in login" />
+    <MESSAGE value="Get tasks from api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Get tasks from api" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3686" y="611" width="312" height="238" key="#ESLint" timestamp="1606380971806">
@@ -605,10 +604,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2869" y="522" width="652" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606126624122" />
-    <state x="2402" y="396" width="912" height="748" key="CommitChangelistDialog2" timestamp="1606120481436">
+    <state x="2402" y="396" width="912" height="748" key="CommitChangelistDialog2" timestamp="1606465587605">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2402" y="396" width="912" height="748" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606120481436" />
+    <state x="2402" y="396" width="912" height="748" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606465587605" />
     <state x="2992" y="290" width="1478" height="879" key="DiffContextDialog" timestamp="1603453519880">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -685,10 +684,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2942" y="403" width="506" height="640" key="RollbackChangesDialog/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606384180099" />
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606120484520">
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606465590722">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606120484520" />
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606465590722" />
     <state x="2020" y="100" width="2360" height="1240" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605772246919">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -697,24 +696,13 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2981" y="635" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602836549955" />
-    <state x="3531" y="459" width="618" height="558" key="find.popup" timestamp="1606465039734">
+    <state x="3531" y="459" width="618" height="558" key="find.popup" timestamp="1606468955896">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3531" y="459" width="618" height="558" key="find.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606465039734" />
+    <state x="3531" y="459" width="618" height="558" key="find.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606468955896" />
     <state x="2863" y="329" width="672" height="678" key="search.everywhere.popup" timestamp="1604058659231">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2863" y="329" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604058659231" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/store/index.js</url>
-          <line>142</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

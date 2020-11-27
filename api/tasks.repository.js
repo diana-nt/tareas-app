@@ -1,6 +1,6 @@
 import httpClient from './httpClient';
 
-const path = '/17459dff-f942-4af4-add3-8b2025777039';
+const path = 'tasks';
 
 /*const getAllTasks = () => httpClient.get(path);
 const getTask = (task_id) => httpClient.get(path, { task_id });

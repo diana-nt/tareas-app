@@ -22,7 +22,8 @@ export class TaskService {
             tareas = [...tareas, tareaFinal];
         })
         console.log(tareas)
-        return localStorage.setItem('tareas', JSON.stringify(tareas));
+        this.saveTasksInStorage(tareas);
+        // return localStorage.setItem('tareas', JSON.stringify(tareas));
     }
 
     /**
