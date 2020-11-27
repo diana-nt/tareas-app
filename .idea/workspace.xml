@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c52bd6b-bb27-4626-8689-7bbb6084d235" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.development" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/httpClient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/tasks.repository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/specs/journeys.js" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/specs/journeys.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env.variables.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tareas.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tareas.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/tasks/tasks.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/tasks/tasks.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,14 +195,21 @@
       <workItem from="1605865277913" duration="4737000" />
       <workItem from="1605871313194" duration="2360000" />
       <workItem from="1605873685545" duration="3387000" />
-      <workItem from="1606116911842" duration="3551000" />
-    </task>
-    <task id="LOCAL-00009" summary="Add sort button">
-      <created>1602578699254</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1602578699254</updated>
+      <workItem from="1606116911842" duration="6244000" />
+      <workItem from="1606203331666" duration="3904000" />
+      <workItem from="1606288757465" duration="610000" />
+      <workItem from="1606290289214" duration="939000" />
+      <workItem from="1606291229257" duration="14000" />
+      <workItem from="1606291356042" duration="29000" />
+      <workItem from="1606291411958" duration="43000" />
+      <workItem from="1606294379371" duration="668000" />
+      <workItem from="1606378848241" duration="1524000" />
+      <workItem from="1606380382044" duration="1666000" />
+      <workItem from="1606382072767" duration="1394000" />
+      <workItem from="1606383480693" duration="153000" />
+      <workItem from="1606383644782" duration="152000" />
+      <workItem from="1606383809554" duration="4482000" />
+      <workItem from="1606462269456" duration="3236000" />
     </task>
     <task id="LOCAL-00010" summary="Add persisted state">
       <created>1602658342497</created>
@@ -532,14 +547,20 @@
       <option name="project" value="LOCAL" />
       <updated>1606117734569</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Test error in login">
+      <created>1606120481512</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1606120481512</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add translation to english" />
     <MESSAGE value="Move flags to footer and change method in task.js" />
     <MESSAGE value="Move checkmark position" />
     <MESSAGE value="Adjust padding" />
@@ -564,13 +585,14 @@
     <MESSAGE value="Finish chrome testing" />
     <MESSAGE value="Add firefox testing" />
     <MESSAGE value="Span error in login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Span error in login" />
+    <MESSAGE value="Test error in login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test error in login" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3686" y="611" width="312" height="238" key="#ESLint" timestamp="1604398645348">
+    <state x="3686" y="611" width="312" height="238" key="#ESLint" timestamp="1606380971806">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3686" y="611" width="312" height="238" key="#ESLint/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604398645348" />
+    <state x="3686" y="611" width="312" height="238" key="#ESLint/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606380971806" />
     <state x="2829" y="401" width="732" height="644" key="#Inspections" timestamp="1602832217751">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -579,22 +601,22 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="3528" y="545" width="604" height="357" key="#Notifications/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1605777352226" />
-    <state x="2869" y="522" width="652" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604571987056">
+    <state x="2869" y="522" width="652" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606126624122">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2869" y="522" width="652" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604571987056" />
-    <state x="2402" y="396" width="912" height="748" key="CommitChangelistDialog2" timestamp="1606117734380">
+    <state x="2869" y="522" width="652" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606126624122" />
+    <state x="2402" y="396" width="912" height="748" key="CommitChangelistDialog2" timestamp="1606120481436">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2402" y="396" width="912" height="748" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606117734380" />
+    <state x="2402" y="396" width="912" height="748" key="CommitChangelistDialog2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606120481436" />
     <state x="2992" y="290" width="1478" height="879" key="DiffContextDialog" timestamp="1603453519880">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2992" y="290" width="1478" height="879" key="DiffContextDialog/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1603453519880" />
-    <state x="3618" y="478" width="424" height="491" key="FileChooserDialogImpl" timestamp="1605773667259">
+    <state x="3618" y="478" width="424" height="491" key="FileChooserDialogImpl" timestamp="1606291241912">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3618" y="478" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1605773667259" />
+    <state x="3618" y="478" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606291241912" />
     <state width="2514" height="402" key="GridCell.Tab.0.bottom" timestamp="1605859186908">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -659,14 +681,14 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state width="2514" height="495" key="GridCell.Tab.3.right/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604671225388" />
-    <state x="2942" y="403" width="506" height="640" key="RollbackChangesDialog" timestamp="1605777727675">
+    <state x="2942" y="403" width="506" height="640" key="RollbackChangesDialog" timestamp="1606384180099">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2942" y="403" width="506" height="640" key="RollbackChangesDialog/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1605777727675" />
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606117738382">
+    <state x="2942" y="403" width="506" height="640" key="RollbackChangesDialog/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606384180099" />
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606120484520">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606117738382" />
+    <state x="3430" y="456" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606120484520" />
     <state x="2020" y="100" width="2360" height="1240" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605772246919">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -675,13 +697,24 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2981" y="635" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1602836549955" />
-    <state x="3531" y="459" width="618" height="558" key="find.popup" timestamp="1605859970465">
+    <state x="3531" y="459" width="618" height="558" key="find.popup" timestamp="1606465039734">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="3531" y="459" width="618" height="558" key="find.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1605859970465" />
+    <state x="3531" y="459" width="618" height="558" key="find.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1606465039734" />
     <state x="2863" y="329" width="672" height="678" key="search.everywhere.popup" timestamp="1604058659231">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2863" y="329" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053/1920.0.2560.1440@1920.0.2560.1440" timestamp="1604058659231" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/store/index.js</url>
+          <line>142</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

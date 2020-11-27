@@ -38,7 +38,17 @@ name: "Tareas.vue",
         ...mapGetters({tareasAMostrar:"getTareasAMostrar"})
     },
 
+ /*   beforeCreate() {
+        TaskService.setTasksInStorage();
+    },
+*/
     created() {
+        TaskService.setTasksInStorage();
+/*        let tasksStorage = TaskService.getTasksFromStorage();
+        this.$store.dispatch('setTasks',tasksStorage)
+        this.$store.dispatch('agregarCompletadas');*/
+    },
+    mounted() {
         let tasksStorage = TaskService.getTasksFromStorage();
         this.$store.dispatch('setTasks',tasksStorage)
         this.$store.dispatch('agregarCompletadas');

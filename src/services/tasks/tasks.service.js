@@ -1,6 +1,29 @@
 import moment from "moment";
+import repo from "../../../api/tasks.repository";
+import {Task} from "../../entities/task";
 
 export class TaskService {
+
+    static async setTasksInStorage() {
+        const response = await repo.getAllTasks();
+        // console.log(response.data[0]);
+
+        let tareas = [];
+
+        response.data.forEach(function (tarea) {
+            let nuevaTarea = {
+                id: tarea.id,
+                title: tarea.title,
+                completed: tarea.completed,
+                created_at: tarea.created_at,
+                completed_at: tarea.completed_at
+            }
+            let tareaFinal = new Task(nuevaTarea);
+            tareas = [...tareas, tareaFinal];
+        })
+        console.log(tareas)
+        return localStorage.setItem('tareas', JSON.stringify(tareas));
+    }
 
     /**
      *

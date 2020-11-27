@@ -44,14 +44,6 @@ export default {
         if (UserService.getSessionStorage()){
             this.$store.dispatch('login');
         }
-            const envJSON = require('../env.variables.json');
-            if (envJSON['development']){
-                console.log('Estás en desarrollo')
-            } else if (envJSON['production']){
-                console.log('Estás en producción')
-            }else {
-                console.log('Has hecho algo mal con la variable de entorno')
-            }
     }
 }
 </script>
