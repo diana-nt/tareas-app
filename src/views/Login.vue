@@ -25,6 +25,9 @@ export default {
             error: ''
         }
     },
+    mounted() {
+      UserService.addUser('diana', '1234');
+    },
     methods: {
         async login() {
             this.error = '';

@@ -6,9 +6,14 @@ import repo from '../../../api/users.repository';
 
 export class UserService {
 
+    static async addUser(username, password) {
+        const response = await repo.setUser(username, password);
+        console.log(response)
+    }
+
     static async login(input){
         const response = await repo.getUser();
-        console.log(response.data.username)
+        // console.log(response.data.username)
         let logear = false;
         if(input.username === response.data.username && input.password === response.data.password){
             logear = true;
