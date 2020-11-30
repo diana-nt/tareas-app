@@ -5,6 +5,7 @@ import moment from 'moment';
 import account from './account';
 import {TaskService} from "../services/tasks";
 import {Task} from "../entities/task";
+// import repo from '../../api/tasks.repository'
 
 Vue.use(Vuex)
 
@@ -66,7 +67,8 @@ export default new Vuex.Store({
         completed_at: tarea.completed_at
       }
       state.tareas.push(nuevaTarea);
-      TaskService.addTaskToStorage(nuevaTarea);
+      // TaskService.addTaskToStorage(nuevaTarea);
+      TaskService.addTask(nuevaTarea).then(r => console.log(r)).catch(e => console.log(e));
     },
     COMPLETAR_TAREA(state, tareaId){
       const tarea = state.tareas.find(tarea => tarea.id === tareaId);

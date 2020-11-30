@@ -24,7 +24,7 @@
 import Tareas from "../components/Tareas";
 import AgregarTarea from "../components/AgregarTarea";
 import CustomSelect from "../components/CustomSelect";
-import {TaskService} from "../services/tasks";
+// import {TaskService} from "../services/tasks";
 
 
 export default {
@@ -58,14 +58,14 @@ export default {
         deleteTask(id) {
             this.$store.dispatch("eliminarTarea", id);
             this.$store.dispatch('actualizarFecha');
-            let finalTasks = this.$store.getters.getTareas;
-            TaskService.saveTasksInStorage(finalTasks);
+            // let finalTasks = this.$store.getters.getTareas;
+            // TaskService.saveTasksInStorage(finalTasks);
         },
         completeTask(id) {
             this.$store.dispatch("completarTarea", id);
             this.$store.dispatch('actualizarFecha');
-            let finalTasks = this.$store.getters.getTareas;
-            TaskService.saveTasksInStorage(finalTasks);
+            /*let finalTasks = this.$store.getters.getTareas;
+            TaskService.saveTasksInStorage(finalTasks);*/
         },
         /*forceRerender() {
             this.componentKey += 0;

@@ -16,5 +16,14 @@ export {
 export default {
     async getAllTasks() {
         return await httpClient.get(path);
+    },
+    async setTask(tarea) {
+        return await httpClient.post(path, {
+            completed: tarea.completed,
+            completed_at: tarea.completed_at,
+            created_at: tarea.created_at,
+            id: tarea.id,
+            title: tarea.title
+        })
     }
 }

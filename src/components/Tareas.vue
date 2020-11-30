@@ -38,29 +38,13 @@ name: "Tareas.vue",
         ...mapGetters({tareasAMostrar:"getTareasAMostrar"})
     },
 
-/*    beforeCreate() {
-        TaskService.setTasksInStorage();
-    },*/
-
-      /*  beforeCreate() {
-            TaskService.setTasksInStorage();
-            let tasksStorage = TaskService.getTasksFromStorage();
-            this.$store.dispatch('setTasks',tasksStorage)
-            this.$store.dispatch('agregarCompletadas');
-        },*/
-
-    created() {
-        TaskService.setTasksInStorage();
-        let tasksStorage = TaskService.getTasksFromStorage();
-        this.$store.dispatch('setTasks',tasksStorage)
+    async created() {
+        // TaskService.setTasksInStorage();
+        let tasksRepository = await TaskService.getTasksFromRepository();
+        // console.log(tasksRepository)
+        this.$store.dispatch('setTasks', tasksRepository);
         this.$store.dispatch('agregarCompletadas');
     },
-
-/*    mounted() {
-        let tasksStorage = TaskService.getTasksFromStorage();
-        this.$store.dispatch('setTasks',tasksStorage)
-        this.$store.dispatch('agregarCompletadas');
-    },*/
 
     methods: {
         getDaysFromCompleted(tarea){

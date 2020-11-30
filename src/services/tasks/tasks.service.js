@@ -4,7 +4,7 @@ import {Task} from "../../entities/task";
 
 export class TaskService {
 
-    static async setTasksInStorage() {
+    /*static async setTasksInStorage() {
         const response = await repo.getAllTasks();
         // console.log(response.data[0]);
 
@@ -21,10 +21,10 @@ export class TaskService {
             let tareaFinal = new Task(nuevaTarea);
             tareas = [...tareas, tareaFinal];
         })
-        console.log(tareas)
+        // console.log(tareas)
         this.saveTasksInStorage(tareas);
         // return localStorage.setItem('tareas', JSON.stringify(tareas));
-    }
+    }*/
 
     /**
      *
@@ -33,8 +33,26 @@ export class TaskService {
      * Pide tareas a localStorage y las devuelve como array
      *
      * */
-    static getTasksFromStorage(){
+    /*static getTasksFromStorage(){
         return JSON.parse(localStorage.getItem('tareas')) || [];
+    }*/
+
+    static async getTasksFromRepository() {
+        const response = await repo.getAllTasks();
+        let tareas = [];
+
+        response.data.forEach(function (tarea) {
+            let nuevaTarea = {
+                id: tarea.id,
+                title: tarea.title,
+                completed: tarea.completed,
+                created_at: tarea.created_at,
+                completed_at: tarea.completed_at
+            }
+            let tareaFinal = new Task(nuevaTarea);
+            tareas = [...tareas, tareaFinal];
+        })
+        return tareas;
     }
 
     /**
@@ -44,7 +62,7 @@ export class TaskService {
      * Guardar tareas en LocalStorage y devolver si se han guardado true y si no false
      *
      * */
-    static saveTasksInStorage(tasks){
+/*    static saveTasksInStorage(tasks){
         return localStorage.setItem('tareas', JSON.stringify(tasks));
     }
 
@@ -55,11 +73,16 @@ export class TaskService {
             localStorage.removeItem('tareas');
         }
         return this.saveTasksInStorage(newTasks);
+    }*/
+
+    static async addTask(task){
+        const response = await repo.setTask(task);
+        console.log(response)
     }
 
     static getCompletedTasks(){
         let completadas = [];
-        let tasks = this.getTasksFromStorage()
+        let tasks = this.getTasksFromRepository();
         tasks.forEach((task) => {
             if (task.completed) {
                 completadas = [...completadas, task];
